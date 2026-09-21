@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="ZHCash P2P Blockchain Network — hybrid UTXO + EVM/x86 Proof‑of‑Stake L1 for dApps, tokens, and enterprise automation." name="description"/>
+<meta content="zhcash, zhchain, zhc, zrc, evm, dao, defi, zerogravity, foundation, ethereum, bitcoin, blockchain, dapps, smart contract, token, erc20, zrc20" name="keywords"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="on" name="uri-translation"/>
+<title data-i18n="brand.title">ZHCash P2P Blockchain Network</title>
+<link href="img/core-img/favicon.ico" rel="icon"/>
+<meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+<meta content="no-cache" http-equiv="Pragma"/>
+<meta content="0" http-equiv="Expires"/>
+<link href="css/style.css?v=0.2.12" rel="stylesheet"/>
+</head>
+<body class="theme-dark">
+<header class="site-header" id="top">
+<div class="container nav-wrap">
+<a class="logo" href="#home">
+<img alt="ZHCash P2P Blockchain Network" decoding="async" height="70" src="img/logo.webp" width="398"/>
+</a>
+<nav class="site-nav" id="site-nav">
+<a data-i18n="nav.home" href="#home">Home</a>
+<a data-i18n="nav.about" href="#about">About</a>
+<a data-i18n="nav.technology" href="#technology">Technology</a>
+<a data-i18n="nav.wallets" href="#wallets">Wallets</a>
+<a data-i18n="nav.contact" href="#contact">Contact</a>
+<a data-i18n="nav.explorer" href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a data-i18n="nav.docs" href="https://zh.cash/docs/en/" rel="noopener" target="_blank">Docs</a>
+</nav>
+<div aria-label="Select language" class="lang-switcher">
+<button aria-expanded="false" aria-haspopup="listbox" class="lang-current" type="button">
+<span class="lang-name" data-i18n="lang.current">English</span>
+</button>
+<ul class="lang-options" hidden="" role="listbox">
+<li data-lang="en" role="option">English</li>
+<li data-lang="ru" role="option">Русский</li>
+</ul>
+</div>
+<div class="nav-actions">
+<a class="btn ghost" data-i18n="nav.explorer" href="https://zeroscan.st" rel="noopener" target="_blank">
+            Explorer
+          </a>
+<a class="btn primary" data-i18n="hero.cta.wallet" href="https://wallet.zeroscan.st" rel="noopener" target="_blank">Wallet</a>
+</div>
+<button aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle" type="button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</header>
+<main>
+<div class="announcement-bar" style="background: linear-gradient(90deg, rgba(56,189,248,0.12), rgba(245,158,11,0.14), rgba(56,189,248,0.12)); border-bottom: 1px solid rgba(245,158,11,0.35); color: #e2e8f0; text-align: center; padding: 14px 20px;">
+<p data-i18n="announce.text" style="margin: 0; font-size: 0.95rem;">
+          Update your node to <strong>Evolution 1.0.0</strong> before <strong>September 10, 2026</strong>. PoS reward halving at block <strong>1,700,000</strong> (~September 20, 2026): <strong>800 ZHC → 400 ZHC</strong>. <a href="#downloads" style="color: #38bdf8; font-weight: 600; text-decoration: underline;">Download now</a>
+</p>
+</div>
+<section class="hero" id="home">
+<div class="hero-media">
+<div class="hero-overlay"></div>
+<video aria-hidden="true" autoplay="" loop="" muted="" playsinline="" poster="img/video-frame.webp" preload="metadata"><source src="video/zerohour.mp4" type="video/mp4"/></video>
+</div>
+<div class="container hero-grid">
+<div class="hero-copy">
+<p class="eyebrow" data-i18n="hero.eyebrow">ZHCash P2P Blockchain Network</p>
+<h1 data-i18n="hero.headline">Hybrid UTXO + EVM/x86 Proof‑of‑Stake L1 for business-grade dApps.</h1>
+<p class="lead" data-i18n="hero.description">
+              Open-source infrastructure that combines Bitcoin security, Ethereum compatibility, and fast PoS
+              finality. Build, deploy, and scale decentralized applications, tokens, and enterprise automation
+              on a single network.
+            </p>
+<div class="hero-cta">
+<a class="btn primary" data-i18n="hero.cta.wallet" href="https://wallet.zeroscan.st" rel="noopener" target="_blank">Wallet</a>
+<a class="btn ghost" data-i18n="hero.cta.explorer" href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a class="btn subtle" data-i18n="hero.cta.docs" href="https://zh.cash/docs/en/" rel="noopener" target="_blank">Read Docs</a>
+</div>
+<div class="hero-meta">
+<div>
+<span class="meta-label" data-i18n="hero.meta.network">Network started</span>
+<strong data-i18n="hero.meta.date">4.12.2019</strong>
+</div>
+<div>
+<span class="meta-label" data-i18n="hero.meta.genesis">Genesis block</span>
+<a data-i18n="hero.meta.view" href="https://zeroscan.io/block/1" rel="noopener" target="_blank">View on ZeroScan</a>
+</div>
+<div>
+<span class="meta-label" data-i18n="hero.meta.testnet">Testnet</span>
+<a data-i18n="hero.cta.testnet" href="https://testnet.zh.cash" rel="noopener" target="_blank">Launch Testnet</a>
+</div>
+</div>
+</div>
+<div class="hero-card">
+<h3 data-i18n="features.title">Platform capabilities</h3>
+<ul class="tag-list">
+<li data-i18n="features.dao">DAO concept</li>
+<li data-i18n="features.solidity">Solidity platform</li>
+<li data-i18n="features.pos">PoS consensus</li>
+<li data-i18n="features.opensource">Open source</li>
+<li data-i18n="features.master">Master Contracts</li>
+<li data-i18n="features.smart">Smart Contracts</li>
+<li data-i18n="features.zrc">ZRC (ERC20 &amp; ERC721)</li>
+<li data-i18n="features.defi">DeFi &amp; NFT</li>
+<li data-i18n="features.utxo">UTXO &amp; DApps</li>
+<li data-i18n="features.db">Decentralized DB</li>
+<li data-i18n="features.builder">Smart Contract Builder</li>
+<li data-i18n="features.crowdfunding">Crowdfunding</li>
+<li data-i18n="features.crowdinvesting">Crowdinvesting</li>
+<li data-i18n="features.launchpad">Launchpad</li>
+<li data-i18n="features.dpos_ipos">DPoS &amp; IPoS</li>
+<li data-i18n="features.dex">DEX &amp; P2P</li>
+<li data-i18n="features.api">Open API</li>
+<li data-i18n="features.testnet">Testnet</li>
+</ul>
+<div class="hero-links">
+<a data-i18n="features.whitepaper" href="https://zh.cash/download/ZHCash_WhitePaper_EN.pdf" rel="noopener" target="_blank">
+                White paper
+              </a>
+<a data-i18n="features.validators" href="https://zh.cash/download/ZHCASH_for_Validators_EN.pdf" rel="noopener" target="_blank">
+                Validators
+              </a>
+<a data-i18n="features.hypernet" href="https://evolution888.pro" rel="noopener" target="_blank">
+                HyperNet
+              </a>
+</div>
+</div>
+</div>
+</section>
+<section class="stats" id="stats">
+<div class="container stats-grid">
+<div class="stat-card">
+<span class="stat-value">80+</span>
+<span class="stat-label" data-i18n="stats.supernodes_label">Supernodes</span>
+</div>
+<div class="stat-card">
+<span class="stat-value">400,000+</span>
+<span class="stat-label" data-i18n="stats.addresses_label">Addresses</span>
+</div>
+<div class="stat-card">
+<span class="stat-value">1,000+</span>
+<span class="stat-label" data-i18n="stats.pos_nodes_label">PoS nodes</span>
+</div>
+<div class="stat-card">
+<span class="stat-value">10,000+</span>
+<span class="stat-label" data-i18n="stats.tokens_label">Tokens &amp; Smart contracts</span>
+</div>
+</div>
+</section>
+<section class="section about" id="about">
+<div class="container split">
+<div>
+<h2 data-i18n="about.title">Business digitalization platform with open source.</h2>
+<p data-i18n="about.p1">
+              ZHCash is built on the innovations of Bitcoin and Ethereum, combining a UTXO ledger with the
+              Ethereum Virtual Machine. It is more than a currency: it enables organizations to track products,
+              services, and customer interactions directly on a public ledger.
+            </p>
+<p data-i18n="about.p2">
+              The platform is designed to automate transactions and enforce contract terms without
+              intermediaries. For example, a car or property sale can be executed automatically when
+              predefined conditions are met, reducing reliance on brokers and lawyers.
+            </p>
+<p data-i18n="about.p3">
+              ZHCash launched its test network in 2018 and has been continuously evolving. It supports the
+              Solidity programming language with ZRC standards (ERC20, ERC721, etc.) and allows businesses to
+              deploy their own blockchain and assets with minimal setup.
+            </p>
+</div>
+<div class="surface">
+<h3 data-i18n="about.highlights_title">Platform highlights</h3>
+<ul class="check-list">
+<li data-i18n="about.highlight1">Real-time operation and fast online transactions.</li>
+<li data-i18n="about.highlight2">Reliable cloud blockchain platform with low fees.</li>
+<li data-i18n="about.highlight3">Low commission for creating smart contracts.</li>
+<li data-i18n="about.highlight4">3rd generation PoS mining with wallet nodes earning network fees.</li>
+<li data-i18n="about.highlight5">IPoS delegation to supernode pools.</li>
+<li data-i18n="about.highlight6">DPoS rewards for main validators.</li>
+</ul>
+<a class="btn subtle" data-i18n="about.cta" href="http://zeroscan.io/contract/tokens" rel="noopener" target="_blank">
+              Explore tokens
+            </a>
+</div>
+</div>
+</section>
+<section class="section technology" id="technology">
+<div class="container">
+<div class="section-header">
+<h2 data-i18n="tech.title">Technical information &amp; architecture</h2>
+<p data-i18n="tech.subtitle">
+              Hybrid algorithms, predictable economics, and multi-VM smart contracts designed for enterprise
+              automation and developer productivity.
+            </p>
+</div>
+<div class="tech-facts">
+<div>
+<h4 data-i18n="tech.core_title">Core facts</h4>
+<ul>
+<li data-i18n="tech.block_time">Block time: 120 seconds</li>
+<li data-i18n="tech.block_size">Block size: 2 MB</li>
+<li data-i18n="tech.supply">Total supply: 10 billion ZHC</li>
+<li data-i18n="tech.reward">Block reward: 800 ZHC (~1%)</li>
+<li data-i18n="tech.consensus">Consensus: Proof‑of‑Stake (PoS 3.0)</li>
+</ul>
+</div>
+<div>
+<h4 data-i18n="tech.vm_title">Virtual machines &amp; languages</h4>
+<ul>
+<li data-i18n="tech.vm_evm">EVM + x86 virtual machine compatibility</li>
+<li data-i18n="tech.vm_langs">Languages: Solidity, C/C++, Rust, Python</li>
+<li data-i18n="tech.vm_standards">Standards: ERC20, ERC721, ZRC</li>
+<li data-i18n="tech.vm_compat">Compatibility: Go, C#, Java</li>
+</ul>
+</div>
+</div>
+<div class="card-grid">
+<article class="card">
+<img alt="Consensus" decoding="async" loading="lazy" src="img/consensus.svg"/>
+<h3 data-i18n="tech.consensus_card_title">Consensus</h3>
+<p data-i18n="tech.consensus_card_text">Proof‑of‑Stake 3.0 provides energy‑efficient security and predictable finality.</p>
+</article>
+<article class="card">
+<img alt="Decentralized Governance Protocol" decoding="async" loading="lazy" src="img/dgp.svg"/>
+<h3 data-i18n="tech.dgp_card_title">DGP governance</h3>
+<p data-i18n="tech.dgp_card_text">Change blockchain parameters through on‑chain voting and smart contract governance.</p>
+</article>
+<article class="card">
+<img alt="Work speed" decoding="async" loading="lazy" src="img/workspeed.svg"/>
+<h3 data-i18n="tech.speed_card_title">Work speed</h3>
+<p data-i18n="tech.speed_card_text">Average block generation time is 2 minutes, depending on network activity.</p>
+</article>
+<article class="card">
+<img alt="Token creation" decoding="async" loading="lazy" src="img/tokencreation.svg"/>
+<h3 data-i18n="tech.token_card_title">Token creation</h3>
+<p data-i18n="tech.token_card_text">Deploy tokens under widely accepted standards in multiple languages, including Solidity.</p>
+</article>
+<article class="card">
+<img alt="Smart contracts" decoding="async" loading="lazy" src="img/smartcontract.svg"/>
+<h3 data-i18n="tech.contracts_card_title">Smart contracts</h3>
+<p data-i18n="tech.contracts_card_text">Business‑ready contracts designed to automate enterprise processes and reduce costs.</p>
+</article>
+<article class="card">
+<img alt="UTXO" decoding="async" loading="lazy" src="img/utxo.svg"/>
+<h3 data-i18n="tech.utxo_card_title">UTXO + SPV</h3>
+<p data-i18n="tech.utxo_card_text">Efficient verification enables light clients to validate transactions without full nodes.</p>
+</article>
+<article class="card">
+<img alt="Account Abstraction Layer" decoding="async" loading="lazy" src="img/setting.svg"/>
+<h3 data-i18n="tech.aal_title">Account Abstraction Layer</h3>
+<p data-i18n="tech.aal_text">AAL enables new virtual machines, reusable smart contracts, and simplified account logic.</p>
+</article>
+<article class="card">
+<img alt="PoS" decoding="async" loading="lazy" src="img/sun.svg"/>
+<h3 data-i18n="tech.pos_card_title">PoS mining</h3>
+<p data-i18n="tech.pos_card_text">2 billion ZHC mined by PoS nodes. Block reward 800 ZHC plus transaction fees.</p>
+<a data-i18n="tech.stake_cta" href="https://zeroscan.io/misc/stake-calculator" rel="noopener" target="_blank">
+                Stake calculator
+              </a>
+</article>
+<article class="card">
+<img alt="DApps" decoding="async" loading="lazy" src="img/dapps.svg"/>
+<h3 data-i18n="tech.dapps_card_title">DApps</h3>
+<p data-i18n="tech.dapps_card_text">Build decentralized apps and databases secured by master smart contracts.</p>
+</article>
+<article class="card">
+<img alt="DPoS" decoding="async" loading="lazy" src="img/sun.svg"/>
+<h3 data-i18n="tech.dpos_card_title">DPoS</h3>
+<p data-i18n="tech.dpos_card_text">Rewards for supernode validators who secure and coordinate network consensus.</p>
+</article>
+<article class="card">
+<img alt="Supernodes" decoding="async" loading="lazy" src="img/supernodes.svg"/>
+<h3 data-i18n="tech.supernodes_card_title">Supernodes</h3>
+<p data-i18n="tech.supernodes_card_text">Supernodes act as pivots and main validators with decentralized delegate pools.</p>
+</article>
+<article class="card">
+<img alt="IPoS" decoding="async" loading="lazy" src="img/sun.svg"/>
+<h3 data-i18n="tech.ipos_card_title">IPoS delegation</h3>
+<p data-i18n="tech.ipos_card_text">Lease ZHC to supernode pools for staking rewards and network security.</p>
+</article>
+<article class="card">
+<img alt="Smart contract constructor" decoding="async" loading="lazy" src="img/smc.svg"/>
+<h3 data-i18n="tech.constructor_title">Smart contract builder</h3>
+<p data-i18n="tech.constructor_text">Visual constructor for tokens and contracts in the main console (zhcash.org).</p>
+</article>
+<article class="card">
+<img alt="Open API" decoding="async" loading="lazy" src="img/api.svg"/>
+<h3 data-i18n="tech.api_card_title">Open API</h3>
+<p data-i18n="tech.api_card_text">Developer‑friendly API for building wallets, dashboards, and integrations.</p>
+</article>
+<article class="card">
+<img alt="Security" decoding="async" loading="lazy" src="img/security.svg"/>
+<h3 data-i18n="tech.security_card_title">Security</h3>
+<p data-i18n="tech.security_card_text">Wallet protection via password, private key, and pass phrase.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section wallets" id="wallets">
+<div class="container">
+<div class="section-header">
+<h2 data-i18n="wallets.title">ZHC Wallet</h2>
+<p data-i18n="wallets.subtitle">
+              Self-custody browser wallet for ZHCASH and integrated networks.
+            </p>
+</div>
+<div class="wallet-intro">
+<p>
+<strong data-i18n="wallets.official_label">Official release.</strong>
+<span data-i18n="wallets.official_text">The ZHCASH team maintains ZHC Wallet as the primary non-custodial browser PWA wallet for multi-blockchain access. It runs directly in the browser or as an installed PWA. Private keys never leave the user's device. The user alone controls addresses, balances, and transactions.</span>
+</p>
+<p data-i18n="wallets.features">
+              ZHC Wallet supports ZHCASH and integrated blockchain networks, including UTXO-compatible networks,
+              EVM-compatible networks, tokens, activity history, QR receive, address import and generation,
+              offline checks, gifts, DEX/Web3 tools, and custom RPC/scan settings.
+            </p>
+<p class="muted" data-i18n="wallets.notice">
+              No server holds your keys. No intermediary approves your transactions. Full self-custody only.
+            </p>
+<div class="cta-row">
+<a class="btn primary" data-i18n="wallets.cta" href="https://wallet.zeroscan.st" rel="noopener" target="_blank">
+                Wallet
+              </a>
+<a class="btn ghost" data-i18n="wallets.github" href="https://github.com/zerohourcash" rel="noopener" target="_blank">
+                GitHub
+              </a>
+</div>
+</div>
+</div>
+</section>
+<section class="section downloads" id="downloads">
+<div class="container">
+<div class="section-header">
+<h2 data-i18n="downloads.title">Download ZHCASH Node</h2>
+</div>
+<div class="installer-download">
+<h4 data-i18n="downloads.installer_title">ZHCASH Installer</h4>
+<p data-i18n="downloads.installer_desc" style="margin: 4px 0 16px; font-size: 0.95rem;">The installer automatically downloads the latest node version and blockchain data.</p>
+<div class="download-columns">
+<div>
+<h4 data-i18n="downloads.installer_linux">Linux</h4>
+<a data-i18n="downloads.installer_linux_file" download="" href="https://github.com/zerohourcash/ZHC-Installer/releases/latest/download/zhc-installer-linux">zhc-installer-linux</a>
+</div>
+<div>
+<h4 data-i18n="downloads.installer_windows">Windows</h4>
+<a data-i18n="downloads.installer_windows_file" download="" href="https://github.com/zerohourcash/ZHC-Installer/releases/latest/download/zhc-installer-windows.exe">zhc-installer-windows.exe</a>
+</div>
+<div>
+<h4 data-i18n="downloads.installer_macos">macOS</h4>
+<a data-i18n="downloads.installer_macos_file" download="" href="https://github.com/zerohourcash/ZHC-Installer/releases/latest/download/zhc-installer-darwin">zhc-installer-darwin</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section governance" id="governance">
+<div class="container split">
+<div>
+<h2 data-i18n="governance.title">ZRC master contracts</h2>
+<p data-i18n="governance.p1">
+              ZHCash supports smart contracts for both the Ethereum virtual machine and the x86 virtual
+              machine while keeping backward compatibility with Ethereum contracts. Developers can build in
+              Solidity, C/C++, Rust, and Python, with support for ERC20 and ERC721 standards.
+            </p>
+</div>
+<div class="surface">
+<h3 data-i18n="governance.dapps_title">DApps &amp; DGP governance protocol</h3>
+<p data-i18n="governance.dapps_text">
+              Decentralized applications connect users and developers without intermediaries, enabling secure
+              financial and operational workflows. ZHCash introduces advanced contract types that automate
+              complex standing-order style transactions for enterprise use cases.
+            </p>
+<p data-i18n="governance.dgp_text">
+              The Decentralized Governance Protocol (DGP) allows on‑chain changes to parameters such as block
+              size with voting and immediate activation. The Account Abstraction Layer (AAL) keeps the
+              blockchain running while enabling new smart‑contract capabilities and virtual machines.
+            </p>
+</div>
+</div>
+</section>
+<section class="section tokenomics" id="tokenomics">
+<div class="container split">
+<div>
+<h2 data-i18n="governance.dao_title">DAO ZHCash business model</h2>
+<p data-i18n="governance.dao_text">
+              The total amount of transactional gas for developers is capped at 10 billion ZHC coins and
+              governed by smart contracts.
+            </p>
+<img alt="ZHCash" class="token-image" decoding="async" height="501" loading="lazy" src="img/zerohourcash.webp" width="609"/>
+</div>
+<div class="surface">
+<h3 data-i18n="distribution.subtitle">ZHC distribution</h3>
+<ul class="bullet-list">
+<li data-i18n="distribution.d1">2% (200 million ZHC) entered the network through primary node mining at launch.</li>
+<li data-i18n="distribution.d2">5% (500 million ZHC) distributed to investors and developer communities during IPCO.</li>
+<li data-i18n="distribution.d3">1% (100 million ZHC) distributed via the BOUNTY💎 program.</li>
+<li data-i18n="distribution.d4">1% (100 million ZHC) distributed via the Airdrop program.</li>
+<li data-i18n="distribution.d5">1% (100 million ZHC) allocated to the core team and open developer community.</li>
+<li data-i18n="distribution.d6">20% (2 billion ZHC) mined via IPoS delegation to supernode pools.</li>
+<li data-i18n="distribution.d7">50% (5 billion ZHC) mined by DPoS supernode validators.</li>
+<li data-i18n="distribution.d8">20% (2 billion ZHC) mined by PoS 3.0 validators.</li>
+</ul>
+<p class="muted" data-i18n="distribution.exchanges">
+              Exchanges and P2P platforms:
+              <a href="https://zhcex.online/register?ref=IYLBQR4N" rel="noopener" target="_blank"><b><u>ZHCEX</u></b></a>
+              &amp;
+              <a href="https://latoken.com/invite?r=uvab4may" rel="noopener" target="_blank"><b><u>LATOKEN</u></b></a>
+              exchanges.
+            </p>
+</div>
+</div>
+</section>
+<section class="section roadmap" id="roadmap">
+<div class="container">
+<div class="section-header">
+<h2 data-i18n="roadmap.title">Roadmap</h2>
+<p data-i18n="roadmap.subtitle">
+              ZHCash roadmap is part of a broader blockchain infrastructure strategy built around real-world
+              adoption, enterprise integrations, and decentralized governance.
+            </p>
+</div>
+<ol class="timeline">
+<li>
+<span class="timeline-date">Q1 2017</span>
+<p data-i18n="roadmap.idea">Idea inception and initial research.</p>
+</li>
+<li>
+<span class="timeline-date">Q3 2017</span>
+<p data-i18n="roadmap.team">Team formation, company creation, and concept development.</p>
+</li>
+<li>
+<span class="timeline-date">Q4 2017</span>
+<p data-i18n="roadmap.first_wallet">Started development of the first wallet version and partner negotiations.</p>
+</li>
+<li>
+<span class="timeline-date">2018</span>
+<p data-i18n="roadmap.website_2018">Website launch, whitepaper development, and initial sales.</p>
+</li>
+<li>
+<span class="timeline-date">Q3 2018</span>
+<p data-i18n="roadmap.alpha_wallet">Alpha wallet release, network launch, and platform v1 development.</p>
+</li>
+<li>
+<span class="timeline-date">2019</span>
+<p data-i18n="roadmap.crowdsale_2019">Crowdsale, marketing, internal exchange launch, and supernode sales.</p>
+</li>
+<li>
+<span class="timeline-date">2019–2020</span>
+<p data-i18n="roadmap.mobile_app">Mobile app, block explorer, and new partnerships for market expansion.</p>
+</li>
+<li>
+<span class="timeline-date">2020</span>
+<p data-i18n="roadmap.beta">Final development stage and beta releases of the wallet and platform.</p>
+</li>
+<li>
+<span class="timeline-date">2019–2025</span>
+<p data-i18n="roadmap.integration">Integration with electronic marketplaces and the real economy.</p>
+</li>
+<li>
+<span class="timeline-date">2025 — Core Maturity Completion</span>
+<p data-i18n="roadmap.core_maturity">
+                Stable ZHChain operations with long-term uptime, tens of millions of blocks, and expanded
+                validator/supernode capacity. Strengthened DeFi modules, smart contracts, and internal
+                financial tooling. Preparation for the ecosystem and institutional phase.
+              </p>
+</li>
+<li>
+<span class="timeline-date">2026 — Ecosystem Consolidation &amp; Infrastructure Upgrade</span>
+<p data-i18n="roadmap.ecosystem_upgrade">
+                Core audit and optimization (performance, security, resiliency). Updated validator and
+                supernode protocols, unified wallets (desktop/mobile/light), expanded API/SDK for business
+                integrations, and stronger governance and network stability.
+              </p>
+</li>
+<li>
+<span class="timeline-date">2027 — Web3 Services &amp; Business Integration Layer</span>
+<p data-i18n="roadmap.web3_services">
+                Launch of full B2B modules on ZHChain and broad integration into digital services, payment
+                gateways, and marketplaces. Tools for tokenizing real assets and services with growing
+                institutional interest.
+              </p>
+</li>
+<li>
+<span class="timeline-date">2028 — Cross-Chain &amp; Global Expansion Phase</span>
+<p data-i18n="roadmap.cross_chain">
+                Deep cross-chain integrations, liquidity bridges, and inter-network settlement. Expanded
+                geographic adoption with multi-network assets and decentralized financial flows, plus a
+                growing global developer and operator community.
+              </p>
+</li>
+<li>
+<span class="timeline-date">2029 — Institutional Adoption &amp; Real-World Scaling</span>
+<p data-i18n="roadmap.institutional">
+                ZHChain used in large business processes and payment circuits with optional enterprise and
+                government integration. Expanded validator economics, incentives, and long-term sustainability.
+              </p>
+</li>
+<li>
+<span class="timeline-date">2030 — Mature Decentralized Infrastructure Network</span>
+<p data-i18n="roadmap.mature">
+                ZHCash/ZHChain as a mature decentralized infrastructure standard with a self-sustaining
+                validator economy, full digital/real-world integration, and focus on autonomy and longevity.
+              </p>
+</li>
+</ol>
+<p class="muted" data-i18n="roadmap.logic">
+            Roadmap logic: 2017–2020 — inception and technical foundation. 2021–2025 — growth, resilience,
+            and real-world operation. 2026–2030 — institutionalization, scaling, and infrastructure
+            leadership.
+          </p>
+</div>
+</section>
+<section class="section faq" id="faq">
+<div class="container">
+<div class="section-header">
+<h2 data-i18n="faq.title">Frequently asked questions</h2>
+<p data-i18n="faq.subtitle">Key information for developers, validators, and enterprises.</p>
+</div>
+<div class="faq-grid">
+<details>
+<summary data-i18n="faq.q1">What is ZHCash Network?</summary>
+<p data-i18n="faq.a1">
+                ZHCash is an open blockchain platform designed for decentralized applications, token issuance,
+                and crowdfunding. It combines Bitcoin’s UTXO model with Ethereum’s virtual machine and smart
+                contracts, enabling secure payments and programmable business logic.
+              </p>
+</details>
+<details>
+<summary data-i18n="faq.q2">What are the project goals?</summary>
+<p data-i18n="faq.a2">
+                ZHCash enables businesses to sell products and services on a public ledger while providing
+                automatic proof of purchase and lifecycle support. The platform replaces centralized databases
+                with on‑chain transactions and automates contract conditions, reducing the need for
+                intermediaries.
+              </p>
+</details>
+<details>
+<summary data-i18n="faq.q3">Token creation (ERC20, ERC721) and DApps on ZHCash</summary>
+<p data-i18n="faq.a3">
+                Smart contracts and ZRC tokens can be created in the QT wallet or via templates from
+                <a href="https://github.com/zerohourcash/zrc" rel="noopener" target="_blank">GitHub</a>. Tokens
+                can also be created in the <a href="https://zhcash.org" rel="noopener" target="_blank">main console</a>
+                using the smart contract builder in three steps.
+              </p>
+</details>
+<details>
+<summary data-i18n="faq.q4">Who develops the ZHCash Network?</summary>
+<p data-i18n="faq.a4">
+                ZHCash is developed by a community of coordinated teams. Core algorithms are maintained by
+                ZeroHour Developers, with engineering, testing, and business model work from ZeroLab. Network
+                validators (DAO ZHCash), international consumer societies, and the Zero Gravity Foundation
+                contribute to implementation and adoption.
+              </p>
+</details>
+<details>
+<summary data-i18n="faq.q5">What is a supernode?</summary>
+<p data-i18n="faq.a5">
+                A supernode is a validator wallet holding the parent asset of the ZHCash network. The minimum
+                stake is 20,000,000 ZHC, and only DAO members can operate supernodes. Supernodes form the
+                backbone of the network.
+              </p>
+</details>
+<details>
+<summary data-i18n="faq.q6">What is the maximum number of supernodes?</summary>
+<p data-i18n="faq.a6">Currently 80+ supernodes are active. The network caps the total at 112 supernodes.</p>
+</details>
+<details>
+<summary data-i18n="faq.q7">What are the requirements for organizing a PoS node?</summary>
+<p data-i18n="faq.a7">
+                A PoS node requires a wallet holding at least 100,000 ZH (recommended 1–10 million). The node
+                can run on Windows, Linux, macOS, or Raspberry Pi and may be deployed on a PC, server, or
+                laptop. The wallet must stay online.
+              </p>
+</details>
+<details>
+<summary data-i18n="faq.q8">What are the requirements for organizing a supernode?</summary>
+<p data-i18n="faq.a8">
+                Requirements include DAO referrals, a voluntary donation for network development in exchange
+                for a 20 million ZHC stake, a dedicated server, installation of the wallet, and validator
+                status. Recommended server specs: 2 cores, 8 GB RAM, 200 GB SSD. The supernode must remain
+                online 24/7 with monitored uptime.
+              </p>
+</details>
+</div>
+</div>
+</section>
+<section class="section news" id="news">
+<div class="container">
+<div class="section-header">
+<h2 data-i18n="news.title">News</h2>
+<p data-i18n="news.subtitle">Latest updates and community announcements.</p>
+</div>
+<div class="card-grid">
+<article class="card">
+<img alt="Evolution 1.0.0 node upgrade and halving" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">August 15, 2026</div>
+<h3 data-i18n="news.evolution_title">Update nodes to Evolution 1.0.0</h3>
+<p data-i18n="news.evolution_text">
+                Evolution 1.0.0 activates the updated PoS reward schedule. Upgrade all nodes before September 10, 2026.
+                The block reward stays 800 ZHC until block 1,700,000 (~September 20, 2026) and then halves to 400 ZHC.
+              </p>
+<a data-i18n="news.view" href="https://github.com/zerohourcash/zerohourcash/releases/tag/v1.0.0" rel="noopener" target="_blank">View</a>
+</article>
+<article class="card">
+<img alt="ZHCash network milestone" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">January 22, 2026</div>
+<h3 data-i18n="news.milestone_title">1,500,000 blocks milestone</h3>
+<p data-i18n="news.milestone_text">
+                The ZHCash (ZHChain) blockchain network has officially surpassed a major historical milestone
+                — 1,500,000 blocks generated.
+              </p>
+<a data-i18n="news.view" href="https://t.me/zhcashnewsen/193" rel="noopener" target="_blank">View</a>
+</article>
+<article class="card">
+<img alt="Decentralized venture fund" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">March 3, 2025</div>
+<h3 data-i18n="news.venture_title">Decentralized venture fund</h3>
+<p data-i18n="news.venture_text">ZERO GRAVITY FOUNDATION launches an innovative platform for high-tech startups.</p>
+<a data-i18n="news.view" href="https://t.me/zhcashnewsen/175" rel="noopener" target="_blank">View</a>
+<a data-i18n="news.project_site" href="https://zerogravity.foundation/" rel="noopener" target="_blank">Project site</a>
+</article>
+<article class="card">
+<img alt="THE TRENDS Forum and Exhibition" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">October 8, 2025</div>
+<h3 data-i18n="news.trends_title">THE TRENDS Forum and Exhibition</h3>
+<p data-i18n="news.trends_text">
+                November 18-19: The Trends forum on technology and investments. Use promo code
+                <strong>ZHCASH</strong> for 15% off. Details
+                <a href="https://partner.7tix.io/partner/R5ZHBMT" rel="noopener" target="_blank">here</a>.
+              </p>
+<a data-i18n="news.view" href="https://t.me/zhcashnewsru/849" rel="noopener" target="_blank">View</a>
+</article>
+<article class="card">
+<img alt="Important news and recommendations" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">August 20, 2025</div>
+<h3 data-i18n="news.updates_title">Important news and recommendations</h3>
+<p data-i18n="news.updates_text">Main updates for the ZHChain and ZeroGravity ecosystem (EVOLUTION888).</p>
+<a data-i18n="news.view" href="https://t.me/zhcashnewsen/187" rel="noopener" target="_blank">View</a>
+</article>
+<article class="card">
+<img alt="9 Best Solidity Platforms" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">September 17, 2021</div>
+<h3 data-i18n="news.solidity_title">9 Best Solidity Platforms</h3>
+<p data-i18n="news.solidity_text">Solidity remains the standard for smart contracts and is used by Ethereum and more.</p>
+<a data-i18n="news.view" href="https://cryptonews.net/en/editorial/guest-posts/9-best-solidity-platforms/" rel="noopener" target="_blank">
+                View
+              </a>
+</article>
+<article class="card">
+<img alt="ZHCash open source code published" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">April 25, 2021</div>
+<h3 data-i18n="news.opensource_title">ZHCash open source code published</h3>
+<p data-i18n="news.opensource_text">
+                The ZHCash blockchain code is available on GitHub under the MIT license. Languages include
+                C++, Makefile, Python, C, Shell, CMake, and more.
+              </p>
+<a data-i18n="news.view" href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">View</a>
+</article>
+<article class="card">
+<img alt="ZHCash listed on LATOKEN" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">August 1, 2022</div>
+<h3 data-i18n="news.latoken_title">ZHCash listed on LATOKEN</h3>
+<p data-i18n="news.latoken_text">Trades are open for ZHC to USDT.</p>
+<a data-i18n="news.view" href="https://latoken.com/invite?r=uvab4may" rel="noopener" target="_blank">View</a>
+</article>
+<article class="card">
+<img alt="ZHCash DeFi Bounty Program" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">March 30, 2024</div>
+<h3 data-i18n="news.bounty_title">BOUNTY 💎 Program</h3>
+<p data-i18n="news.bounty_text">
+                ZHCash DeFi Bounty Program rewards network members with BOUNTY tokens based on ZRC-20.
+              </p>
+<a data-i18n="news.view" href="https://t.me/zhcashnewsen/158" rel="noopener" target="_blank">View</a>
+<a data-i18n="news.read" href="https://telegra.ph/ZHCASH-BOUNTY-PROGRAMM-03-30" rel="noopener" target="_blank">Read</a>
+<a data-i18n="news.program_site" href="https://bounty.zhchain.sbs" rel="noopener" target="_blank">Program site</a>
+</article>
+<article class="card">
+<img alt="CoinGecko listing" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">July 22, 2022</div>
+<h3 data-i18n="news.coingecko_title">COINGEKO LISTING</h3>
+<p data-i18n="news.coingecko_text">ZHC listing on CoinGecko with portfolio tracking and market data.</p>
+<a data-i18n="news.view" href="https://www.coingecko.com/en/coins/zhc-zero-hour-cash" rel="noopener" target="_blank">
+                View
+              </a>
+<a data-i18n="news.telegram_updates" href="https://t.me/zhcashnewsen" rel="noopener" target="_blank">Telegram updates</a>
+</article>
+<article class="card">
+<img alt="ZHCEX listing" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
+<div class="card-meta">October 10, 2025</div>
+<h3 data-i18n="news.zhcex_title">ZHCEX LISTING</h3>
+<p data-i18n="news.zhcex_text">
+                ZHC listed on the ZHCEX exchange launched by community partners with secure trading and
+                analytics.
+              </p>
+<a data-i18n="news.view" href="https://zhcex.online/register?ref=IYLBQR4N" rel="noopener" target="_blank">View</a>
+</article>
+</div>
+</div>
+</section>
+<section class="section partners" id="partners">
+<div class="container">
+<div class="section-header">
+<h2 data-i18n="partners.title">Trusted by partners</h2>
+<p data-i18n="partners.subtitle">General and strategic partnerships across exchanges, analytics, and ecosystems.</p>
+</div>
+<div class="logo-grid">
+<a href="https://zhcex.online/register?ref=IYLBQR4N" rel="noopener" target="_blank">
+<svg aria-label="ZHCEX" fill="none" height="52" viewbox="0 0 140 40" width="180" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="logoGradient-default" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#ff1744"></stop>
+<stop offset="50%" stop-color="#ff5722"></stop>
+<stop offset="100%" stop-color="#ff8a50"></stop>
+</lineargradient>
+<lineargradient id="textGradient-default" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#ff1744"></stop>
+<stop offset="100%" stop-color="#ff5722"></stop>
+</lineargradient>
+<filter id="glow">
+<fegaussianblur result="coloredBlur" stddeviation="2"></fegaussianblur>
+<femerge>
+<femergenode in="coloredBlur"></femergenode>
+<femergenode in="SourceGraphic"></femergenode>
+</femerge>
+</filter>
+</defs>
+<circle cx="20" cy="20" fill="url(#logoGradient-default)" opacity="0.1" r="18"></circle>
+<g transform="translate(8, 8)">
+<path d="M4 6h16l-12 8h12v4H4l12-8H4V6z" fill="url(#logoGradient-default)" filter="url(#glow)"></path>
+<path d="M22 4l3 3-3 3M22 18l3 3-3 3" opacity="0.8" stroke="#ff1744" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<circle cx="26" cy="10" fill="#ff5722" opacity="0.6" r="1.5"></circle>
+<circle cx="26" cy="14" fill="#ff8a50" opacity="0.4" r="1"></circle>
+</g>
+<g>
+<text fill="url(#textGradient-default)" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="800" letter-spacing="0.5px" x="45" y="26">ZHCEX</text>
+</g>
+</svg>
+</a>
+<a href="https://latoken.com/invite?r=uvab4may" rel="noopener" target="_blank">
+<img alt="LATOKEN" decoding="async" loading="lazy" src="img/Latoken_Logo.svg"/>
+</a>
+<a href="https://www.mexc.com/ru-RU/invite/customer-register?inviteCode=mexc-12RpBY" rel="noopener" target="_blank">
+<svg aria-label="MEXC logo" fill="none" height="26" viewbox="0 0 93 20" width="120" xmlns="http://www.w3.org/2000/svg">
+<path d="M80.5914 5.4269C81.5885 4.50125 83.3389 4.06046 85.8872 4.06046H91.8478V0.688477H84.8014C83.1175 0.688477 81.6992 0.864795 80.5914 1.21742C79.5056 1.57005 78.5527 2.12103 77.7329 2.89239C76.8686 3.72989 76.1818 4.76571 75.6943 5.99991C75.2068 7.25614 74.963 8.62257 74.963 10.0551C74.963 11.4215 75.2068 12.7439 75.6943 13.956C76.1818 15.1682 76.8686 16.2261 77.7329 17.0636C78.5306 17.835 79.4834 18.3859 80.547 18.7385C81.6327 19.0912 83.0731 19.2675 84.8014 19.2675H91.8478V15.9396H85.8872C84.5355 15.9396 83.6048 15.8955 83.073 15.7852C82.5191 15.6751 82.0095 15.4988 81.5885 15.2344C80.7465 14.7054 80.1039 14.0221 79.6829 13.1626C79.284 12.3251 79.0845 11.2673 79.0845 10.0331C79.0845 7.91733 79.5943 6.35254 80.5914 5.4269Z" fill="currentColor"></path>
+<path d="M28.7189 19.3115H45.3376V16.0498H32.7738V11.3995H43.7421V8.31396H32.7738V3.99429H45.3376V0.710449H28.7189V19.3115Z" fill="currentColor"></path>
+<path d="M49.4811 0.710449L57.2808 10.011L49.4811 19.3115H54.511L60.6489 11.9504V8.09358L54.511 0.710449H49.4811Z" fill="currentColor"></path>
+<path d="M68.3599 0.710449L62.222 8.09358V11.9504L68.3599 19.3115H73.39L65.5902 10.011L73.39 0.710449H68.3599Z" fill="currentColor"></path>
+<path d="M12.4324 9.87875L4.96502 0.710449H1.1095V19.3115H5.16442V6.90346L11.6347 14.6171H13.2079L19.6781 6.83735V19.3115H23.7331V0.710449H19.9219L12.4324 9.87875Z" fill="currentColor"></path>
+</svg>
+</a>
+<a href="https://www.coingecko.com/en/coins/zhc-zero-hour-cash" rel="noopener" target="_blank">
+<img alt="CoinGecko" decoding="async" height="170" loading="lazy" src="img/coingecko.webp" width="640"/>
+</a>
+<a href="https://coinstats.app/coins/zhc-zero-hour-cash" rel="noopener" target="_blank">
+<img alt="CoinStats" decoding="async" loading="lazy" src="img/coinstats.svg"/>
+</a>
+<a href="img/rasvetcooplogo.webp" rel="noopener" target="_blank">
+<img alt="Rasvet Coop" decoding="async" src="img/rasvetcooplogo.webp"/>
+</a>
+<a href="https://zh.cash/img/v3logo.png" rel="noopener" target="_blank">
+<img alt="V3 Games" loading="lazy" src="img/v3logo.webp"/>
+</a>
+<a href="img/globalinvesthub.webp" rel="noopener" target="_blank">
+<img alt="Global Invest Hub" decoding="async" height="227" loading="lazy" src="img/globalinvesthub.webp" width="640"/>
+</a>
+<a href="img/cvl-network.svg" rel="noopener" target="_blank">
+<img alt="CVL Network" decoding="async" loading="lazy" src="img/cvl-network.svg"/>
+</a>
+<a href="https://nftmart.art" rel="noopener" target="_blank">
+<img alt="NFTMART.art" decoding="async" height="119" loading="lazy" src="img/nftmart.webp" width="640"/>
+</a>
+<a href="https://blockchainkz.info/en/" rel="noopener" target="_blank">
+<img alt="BlockchainKZ" decoding="async" loading="lazy" src="img/blockchainkz.svg"/>
+</a>
+<a href="https://www.forbes.com/digital-assets/assets/zhc-zero-hour-cash-zhc-2/" rel="noopener" target="_blank">
+<img alt="Forbes Digital Assets" decoding="async" height="60" loading="lazy" src="img/forbes.webp" width="250"/>
+</a>
+<a href="https://coinmarketcap.com/community/profile/zhchain/" rel="noopener" target="_blank">
+<img alt="CoinMarketCap" decoding="async" height="213" src="img/coinmarketcaplogo.webp" width="640"/>
+</a>
+<a href="https://zhchain.sbs/assets/images/crypto-emergency.svg" rel="noopener" target="_blank">
+<span class="partner-name">Crypto Emergency</span>
+</a>
+<a href="img/cryptosummit-logo-red.svg" rel="noopener" target="_blank">
+<img alt="Crypto Summit 2024" decoding="async" src="img/cryptosummit-logo-red.svg"/>
+</a>
+<a href="https://zerogravity.foundation" rel="noopener" target="_blank">
+<span class="partner-name">Zero Gravity Foundation</span>
+</a>
+<a href="img/ico-platforms/1.webp" rel="noopener" target="_blank">
+<img alt="Trusted platform 1" decoding="async" height="107" loading="lazy" src="img/ico-platforms/1.webp" width="130"/>
+</a>
+<a href="img/ico-platforms/2.webp" rel="noopener" target="_blank">
+<img alt="Trusted platform 2" decoding="async" height="105" loading="lazy" src="img/ico-platforms/2.webp" width="130"/>
+</a>
+<a href="img/ico-platforms/3.webp" rel="noopener" target="_blank">
+<img alt="Trusted platform 3" decoding="async" height="76" loading="lazy" src="img/ico-platforms/3.webp" width="123"/>
+</a>
+<a href="img/ico-platforms/4.webp" rel="noopener" target="_blank">
+<img alt="Trusted platform 4" decoding="async" height="82" loading="lazy" src="img/ico-platforms/4.webp" width="130"/>
+</a>
+<a href="img/ico-platforms/6.webp" rel="noopener" target="_blank">
+<img alt="Trusted platform 6" decoding="async" height="85" loading="lazy" src="img/ico-platforms/6.webp" width="130"/>
+</a>
+</div>
+</div>
+</section>
+<section class="section contact" id="contact">
+<div class="container split">
+<div>
+<h2 data-i18n="contact.title">Contact &amp; community</h2>
+<p data-i18n="contact.subtitle">
+              We are always ready to answer your questions. When contacting support, include your preferred
+              response method.
+            </p>
+<a class="btn primary" data-i18n="contact.ticket" href="https://app.zhcash.network/forms/ticket?col=col-md-5" rel="noopener" target="_blank">
+              Write a support ticket
+            </a>
+</div>
+<div class="surface">
+<h3 data-i18n="contact.social">Stay connected</h3>
+<div class="social-grid">
+<a href="https://t.me/zhcashnewsen" rel="noopener" target="_blank"><span data-i18n="contact.telegram">Telegram</span></a>
+<a href="https://twitter.com/zhcash_official" rel="noopener" target="_blank"><span data-i18n="contact.twitter">X / Twitter</span></a>
+<a href="https://t.me/zhcash_official" rel="noopener" target="_blank"><span data-i18n="contact.telegram_official">Telegram Official</span></a>
+<a href="https://discord.gg/TVhRqmF" rel="noopener" target="_blank"><span data-i18n="contact.discord">Discord</span></a>
+<a href="https://www.facebook.com/0hourcash/" rel="noopener" target="_blank"><span data-i18n="contact.facebook_page">Facebook Page</span></a>
+<a href="https://www.facebook.com/groups/1404982826831570/" rel="noopener" target="_blank"><span data-i18n="contact.facebook_group">Facebook Group</span></a>
+<a href="https://zhcash.medium.com" rel="noopener" target="_blank"><span data-i18n="contact.medium">Medium</span></a>
+<a href="https://github.com/zerohourcash" rel="noopener" target="_blank"><span data-i18n="contact.github">GitHub</span></a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-top">
+<div class="footer-brand">
+<a href="https://zhchain.sbs" rel="noopener" target="_blank">
+<img alt="ZHChain P2P Blockchain Network" decoding="async" height="285" loading="lazy" src="img/symbol_red.webp" width="285"/>
+</a>
+<p>
+<span data-i18n="footer.copyright">Copyrights © 2018-2026 ZHCash &amp; ZHChain</span><br/>
+<span data-i18n="footer.tagline">Zero Hour Cash P2P Blockchain Network</span><br/>
+<span data-i18n="footer.rights">All rights reserved.</span>
+</p>
+<p>
+<a data-i18n="footer.license" href="mit-license.html" rel="noopener" target="_blank">MIT license</a> |
+            <a data-i18n="footer.privacy" href="policy.html" rel="noopener" target="_blank">Privacy Policy</a>
+</p>
+<p class="muted" data-i18n="footer.updated">Website last updated: 22.01.2026</p>
+</div>
+<div class="footer-columns">
+<div>
+<h4 data-i18n="footer.useful">Useful</h4>
+<a data-i18n="footer.useful_docs" href="https://app.zhcash.network/knowledge-base/category/documentation-eng" rel="noopener" target="_blank">Documentation</a>
+<a data-i18n="footer.useful_api" href="https://zh.cash/docs/en/ZHCash-RPC-API/index.html" rel="noopener" target="_blank">RPC-API</a>
+<a data-i18n="footer.useful_tokens" href="https://zeroscan.io/contract/tokens" rel="noopener" target="_blank">Tokens</a>
+<a data-i18n="footer.useful_stake" href="https://zeroscan.io/misc/stake-calculator" rel="noopener" target="_blank">Stake calculator</a>
+<a data-i18n="footer.useful_top_pos" href="https://zeroscan.io/misc/biggest-miners" rel="noopener" target="_blank">Top PoS nodes</a>
+<a data-i18n="footer.useful_solidity" href="https://docs.soliditylang.org/en/develop/index.html" rel="noopener" target="_blank">Solidity doc</a>
+<a data-i18n="footer.useful_remix" href="https://remix.ethereum.org/" rel="noopener" target="_blank">Remix Compiler</a>
+<a data-i18n="footer.useful_guide" href="https://zh.cash/download/Guide_ZHCASH_1.3_alpha_eng.pdf" rel="noopener" target="_blank">Guide for Dev</a>
+<a data-i18n="footer.useful_peers" href="https://zh.cash/download/peers.zip" rel="noopener" target="_blank">peers.dat</a>
+</div>
+<div>
+<h4 data-i18n="footer.info">Information</h4>
+<a data-i18n="footer.info_whitepaper" href="https://zh.cash/download/ZHCash_WhitePaper_EN.pdf" rel="noopener" target="_blank">White paper</a>
+<a data-i18n="footer.info_validators" href="https://zh.cash/download/ZHCASH_for_Validators_EN.pdf" rel="noopener" target="_blank">Validators</a>
+<a data-i18n="footer.info_hypernet" href="https://evolution888.pro" rel="noopener" target="_blank">HyperNet</a>
+<a data-i18n="footer.info_brand" href="https://zh.cash/download/ZHCASH_style_guide.rar" rel="noopener" target="_blank">Brand book</a>
+<a data-i18n="footer.info_bounty" href="https://bounty.zhcash.net" rel="noopener" target="_blank">BOUNTY💎</a>
+</div>
+<div>
+<h4 data-i18n="footer.services">Services</h4>
+<a data-i18n="footer.services_console" href="https://zhcash.org" rel="noopener" target="_blank">Console</a>
+<a data-i18n="footer.services_explorer" href="https://zeroscan.io" rel="noopener" target="_blank">Explorer</a>
+<a data-i18n="footer.services_monitoring" href="https://zhcash.network" rel="noopener" target="_blank">Monitoring</a>
+<a data-i18n="footer.services_checker" href="https://status.zhcash.network" rel="noopener" target="_blank">Node checker</a>
+<a data-i18n="footer.services_support" href="https://app.zhcash.network" rel="noopener" target="_blank">Support hub</a>
+<a data-i18n="footer.services_kb" href="https://app.zhcash.network/knowledge-base" rel="noopener" target="_blank">Knowledge Base</a>
+</div>
+<div>
+<h4 data-i18n="footer.ecosystem">Ecosystem</h4>
+<a data-i18n="footer.ecosystem_navigator" href="https://zhcash.net" rel="noopener" target="_blank">Navigator</a>
+<a data-i18n="footer.ecosystem_dao" href="https://zerogravity.foundation/dao" rel="noopener" target="_blank">DAO</a>
+<a data-i18n="footer.ecosystem_zgf" href="https://zerogravity.foundation" rel="noopener" target="_blank">Zero Gravity Foundation</a>
+<a data-i18n="footer.ecosystem_grants" href="#soon">Ecosystem Grant Programs</a>
+<a data-i18n="footer.ecosystem_nft" href="https://nftmart.art/blog" rel="noopener" target="_blank">NFT Global Network</a>
+<a data-i18n="footer.ecosystem_jobs" href="https://app.zhcash.network/forms/ticket?col=col-md-5" rel="noopener" target="_blank">Jobs</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom" style="margin-top: 32px; padding-top: 20px; border-top: 1px solid rgba(148, 163, 184, 0.15); text-align: center;">
+<p class="muted" style="margin: 0; font-size: 0.9rem;">
+<span data-i18n="footer.nodes_label">Download nodes:</span>
+<a data-i18n="footer.nodes_github" href="https://github.com/zerohourcash/zerohourcash/releases/tag/v1.0.0" rel="noopener" target="_blank">Linux / Windows (GitHub release)</a>
+<span>·</span>
+<a data-i18n="footer.nodes_macos" href="https://zh.cash/download/nodes/ZHCASH-Qt-macos-arm64-20260718.app.zip">macOS (arm64)</a>
+</p>
+</div>
+</footer>
+<script defer="" src="js/i18n.js"></script><script defer="" src="js/script.js"></script></body>
+</html>
