@@ -10,7 +10,7 @@
       "nav.explorer": "Explorer",
       "nav.docs": "Docs",
       "nav.news": "News",
-      "announce.text": "Update your node to <strong>Evolution 1.0.0</strong> before <strong>September 10, 2026</strong>. PoS reward halving at block <strong>1,700,000</strong> (~September 20, 2026): <strong>800 ZHC → 400 ZHC</strong>. <a href=\"#downloads\" style=\"color: #38bdf8; font-weight: 600; text-decoration: underline;\">Download now</a>",
+      "announce.text": "Evolution 1.0.0 is available. From block <strong>1,700,000</strong>, the PoS block reward is <strong>400 ZHC</strong>. <a href=\"#downloads\">Download node</a>",
       "wallets.title": "ZHC Wallet",
       "wallets.subtitle": "Self-custody browser wallet for ZHCASH and integrated networks.",
       "wallets.official": "<strong>Official release.</strong> The ZHCASH team maintains ZHC Wallet as the primary non-custodial browser PWA wallet for multi-blockchain access. It runs directly in the browser or as an installed PWA. Private keys never leave the user's device. The user alone controls addresses, balances, and transactions.",
@@ -90,7 +90,7 @@
       "tech.block_time": "Block time: 120 seconds",
       "tech.block_size": "Block size: 2 MB",
       "tech.supply": "Total supply: 10 billion ZHC",
-      "tech.reward": "Block reward: 800 ZHC (~1%)",
+      "tech.reward": "Block reward: 400 ZHC (from block 1,700,000)",
       "tech.consensus": "Consensus: Proof‑of‑Stake (PoS 3.0)",
       "tech.vm_title": "Virtual machines & languages",
       "tech.vm_evm": "EVM + x86 virtual machine compatibility",
@@ -112,7 +112,7 @@
       "tech.aal_title": "Account Abstraction Layer",
       "tech.aal_text": "AAL enables new virtual machines, reusable smart contracts, and simplified account logic.",
       "tech.pos_card_title": "PoS mining",
-      "tech.pos_card_text": "2 billion ZHC mined by PoS nodes. Block reward 800 ZHC plus transaction fees.",
+      "tech.pos_card_text": "2 billion ZHC mined by PoS nodes. Block reward 400 ZHC plus transaction fees.",
       "tech.stake_cta": "Stake calculator",
       "tech.dapps_card_title": "DApps",
       "tech.dapps_card_text": "Build decentralized apps and databases secured by master smart contracts.",
@@ -158,7 +158,7 @@
       "roadmap.mobile_app": "Mobile app, block explorer, and new partnerships for market expansion.",
       "roadmap.beta": "Final development stage and beta releases of the wallet and platform.",
       "roadmap.integration": "Integration with electronic marketplaces and the real economy.",
-      "roadmap.core_maturity": "Stable ZHChain operations with long-term uptime, tens of millions of blocks, and expanded validator/supernode capacity. Strengthened DeFi modules, smart contracts, and internal financial tooling. Preparation for the ecosystem and institutional phase.",
+      "roadmap.core_maturity": "Stable ZHChain operations with long-term uptime, a growing block history, and expanded validator/supernode capacity. Strengthened DeFi modules, smart contracts, and internal financial tooling. Preparation for the ecosystem and institutional phase.",
       "roadmap.ecosystem_upgrade": "Core audit and optimization (performance, security, resiliency). Updated validator and supernode protocols, unified wallets (desktop/mobile/light), expanded API/SDK for business integrations, and stronger governance and network stability.",
       "roadmap.web3_services": "Launch of full B2B modules on ZHChain and broad integration into digital services, payment gateways, and marketplaces. Tools for tokenizing real assets and services with growing institutional interest.",
       "roadmap.cross_chain": "Deep cross-chain integrations, liquidity bridges, and inter-network settlement. Expanded geographic adoption with multi-network assets and decentralized financial flows, plus a growing global developer and operator community.",
@@ -231,7 +231,7 @@
       "footer.rights": "All rights reserved.",
       "footer.license": "MIT license",
       "footer.privacy": "Privacy Policy",
-      "footer.updated": "Website last updated: 22.01.2026",
+      "footer.updated": "Website last updated: 21.09.2026",
       "footer.useful": "Useful",
       "footer.useful_docs": "Documentation",
       "footer.useful_api": "RPC-API",
@@ -262,7 +262,7 @@
       "footer.ecosystem_navigator": "Navigator",
       "footer.ecosystem_dao": "DAO",
       "footer.ecosystem_zgf": "Zero Gravity Foundation",
-      "footer.ecosystem_grants": "Ecosystem Grant Programs",
+      "footer.ecosystem_grants": "Ecosystem Grant Programs — coming soon",
       "footer.ecosystem_nft": "NFT Global Network",
       "footer.ecosystem_jobs": "Jobs",
     },
@@ -276,7 +276,7 @@
       "nav.explorer": "Обозреватель",
       "nav.docs": "Доки",
       "nav.news": "Новости",
-      "announce.text": "Обновите ноду до <strong>Evolution 1.0.0</strong> до <strong>10 сентября 2026</strong>. Halving PoS-вознаграждения на блоке <strong>1 700 000</strong> (~20 сентября 2026): <strong>800 ZHC → 400 ZHC</strong>. <a href=\"#downloads\" style=\"color: #38bdf8; font-weight: 600; text-decoration: underline;\">Скачать</a>",
+      "announce.text": "Доступна Evolution 1.0.0. С блока <strong>1 700 000</strong> PoS-награда составляет <strong>400 ZHC</strong>. <a href=\"#downloads\">Скачать ноду</a>",
       "wallets.title": "ZHC Wallet",
       "wallets.subtitle": "Некастодиальный браузерный кошелек для ZHCASH и интегрированных сетей.",
       "wallets.official": "<strong>Официальный релиз.</strong> Команда ZHCASH развивает ZHC Wallet как основной некастодиальный браузерный PWA-кошелек для доступа к нескольким блокчейнам. Он работает прямо в браузере или как установленное PWA-приложение. Приватные ключи никогда не покидают устройство пользователя. Только пользователь управляет адресами, балансами и транзакциями.",
@@ -356,7 +356,7 @@
       "tech.block_time": "Время блока: 120 секунд",
       "tech.block_size": "Размер блока: 2 МБ",
       "tech.supply": "Общее предложение: 10 миллиардов ZHC",
-      "tech.reward": "Награда за блок: 800 ZHC (~1%)",
+      "tech.reward": "Награда за блок: 400 ZHC (с блока 1 700 000)",
       "tech.consensus": "Консенсус: Proof‑of‑Stake (PoS 3.0)",
       "tech.vm_title": "Виртуальные машины и языки",
       "tech.vm_evm": "Совместимость с EVM + x86 виртуальная машина",
@@ -378,7 +378,7 @@
       "tech.aal_title": "AAL",
       "tech.aal_text": "Уровень абстракции для новых виртуальных машин и контрактов.",
       "tech.pos_card_title": "PoS",
-      "tech.pos_card_text": "2 млрд ZHC добываются PoS-нодами. Награда — 800 ZHC за блок.",
+      "tech.pos_card_text": "2 млрд ZHC добываются PoS-нодами. Награда — 400 ZHC за блок плюс комиссии транзакций.",
       "tech.stake_cta": "Стейкинг",
       "tech.dapps_card_title": "DApps",
       "tech.dapps_card_text": "Децентрализованные приложения на мастер-контрактах.",
@@ -411,7 +411,7 @@
       "distribution.d6": "20% (2 млрд. ZHC) будет добыто через IPoS-делегирование в пулы супернод.",
       "distribution.d7": "50% (5 млрд. ZHC) будет добыто главными валидаторами сети по алгоритму DPoS (владельцы супернод).",
       "distribution.d8": "20% (2 млрд. ZHC) будет добыто валидаторами сети через консенсус PoS 3.0.",
-      "distribution.exchanges": "Биржи и P2P-площадки: <a href=\\\"https://zhcex.online/register?ref=IYLBQR4N\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\"><b><u>ZHCEX</u></b></a> и <a href=\\\"https://latoken.com/invite?r=uvab4may\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\"><b><u>LATOKEN</u></b></a>.",
+      "distribution.exchanges": "Биржи и P2P-площадки: <a href=\"https://zhcex.online/register?ref=IYLBQR4N\" target=\"_blank\" rel=\"noopener\"><b><u>ZHCEX</u></b></a> и <a href=\"https://latoken.com/invite?r=uvab4may\" target=\"_blank\" rel=\"noopener\"><b><u>LATOKEN</u></b></a>.",
       "roadmap.title": "Дорожная карта",
       "roadmap.subtitle": "Дорожная карта ZHCash — часть более широкой стратегии блокчейн-инфраструктуры, ориентированной на реальное внедрение, корпоративные интеграции и децентрализованное управление.",
       "roadmap.logic": "Логика дорожной карты: 2017–2020 — зарождение и технический фундамент. 2021–2025 — рост, устойчивость и работа в реальном мире. 2026–2030 — институционализация, масштабирование и лидерство в инфраструктуре.",
@@ -424,7 +424,7 @@
       "roadmap.mobile_app": "Мобильное приложение, обозреватель блоков, новые партнёрские отношения и поддержка новых рынков.",
       "roadmap.beta": "Финальная стадия разработки, выпуск бета-версии кошелька и платформы.",
       "roadmap.integration": "Интеграция платформы с электронными рынками и реальным сектором.",
-      "roadmap.core_maturity": "Стабильная работа ZHChain с длительным аптаймом, десятками миллионов блоков и расширенной ёмкостью валидаторов/супернод. Усиление модулей DeFi, смарт-контрактов и внутренних финансовых инструментов. Подготовка к экосистемной и институциональной фазе.",
+      "roadmap.core_maturity": "Стабильная работа ZHChain с длительным аптаймом, растущей историей блоков и расширенной ёмкостью валидаторов/супернод. Усиление модулей DeFi, смарт-контрактов и внутренних финансовых инструментов. Подготовка к экосистемной и институциональной фазе.",
       "roadmap.ecosystem_upgrade": "Аудит и оптимизация ядра (производительность, безопасность, отказоустойчивость). Обновлённые протоколы валидаторов и супернод, унифицированные кошельки (desktop/mobile/light), расширенное API/SDK для бизнес-интеграций и усиленное управление и стабильность сети.",
       "roadmap.web3_services": "Запуск полноценных B2B-модулей на ZHChain и широкая интеграция в цифровые сервисы, платёжные шлюзы и маркетплейсы. Инструменты токенизации реальных активов и услуг на фоне растущего институционального интереса.",
       "roadmap.cross_chain": "Глубокая кроссчейн-интеграция, ликвидностные мосты и межсетевые расчёты. Расширение географического внедрения с мультисетевыми активами и децентрализованными финансовыми потоками, а также растущее глобальное сообщество разработчиков и операторов.",
@@ -442,7 +442,7 @@
       "faq.q8": "Какие требования для организации суперноды?",
       "faq.a1": "ZHCash — открытая блокчейн-платформа для децентрализованных приложений, выпуска токенов и краудфандинга. Она сочетает модель UTXO Bitcoin с виртуальной машиной и смарт-контрактами Ethereum, обеспечивая безопасные платежи и программируемую бизнес-логику.",
       "faq.a2": "ZHCash позволяет бизнесу продавать продукты и услуги в публичном реестре, обеспечивая автоматическое подтверждение покупки и сопровождение жизненного цикла. Платформа заменяет централизованные базы данных ончейн-транзакциями и автоматизирует условия контрактов, снижая потребность в посредниках.",
-      "faq.a3": "Смарт-контракты и ZRC-токены можно создавать в QT-кошельке или по шаблонам из <a href=\\\"https://github.com/zerohourcash/zrc\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">GitHub</a>. Токены также можно создать в <a href=\\\"https://zhcash.org\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">главной консоли</a> с помощью конструктора смарт-контрактов за три шага.",
+      "faq.a3": "Смарт-контракты и ZRC-токены можно создавать в QT-кошельке или по шаблонам из <a href=\"https://github.com/zerohourcash/zrc\" target=\"_blank\" rel=\"noopener\">GitHub</a>. Токены также можно создать в <a href=\"https://zhcash.org\" target=\"_blank\" rel=\"noopener\">главной консоли</a> с помощью конструктора смарт-контрактов за три шага.",
       "faq.a4": "Сообщество разработчиков ZHCASH состоит из нескольких слаженных между собой команд. Основной разработкой алгоритмов занимается блокчейн-команда ZeroHour Developers. Идеология, инженерия, тестирование и бизнес-модель — команда ZeroLab. Внедрением, UX/UI-дизайном, концепцией развития и маркетингом занимаются валидаторы сети (DAO ZHCASH), международные потребительские общества и децентрализованный венчурный фонд Zero Gravity Foundation.",
       "faq.a5": "Нода (англ. node — узел) — программный кошелёк, на котором находится родительский актив сети ZHCASH. Минимальное количество монет (стейк) для организации суперноды — 20 000 000 ZHC. Кошелёк суперноды является опорным узлом сети. Обладать супернодой может только участник DAO.",
       "faq.a6": "На данный момент в сети ZHChain активно 80+ суперузлов. Всего будет развёрнуто не более 112 суперузлов.",
@@ -462,7 +462,7 @@
       "news.venture_title": "Децентрализованный венчурный фонд",
       "news.venture_text": "ZERO GRAVITY FOUNDATION запускает инновационную платформу для высокотехнологичных стартапов.",
       "news.trends_title": "Форум и выставка THE TRENDS",
-      "news.trends_text": "18–19 ноября: форум The Trends по технологиям и инвестициям. Промокод <strong>ZHCASH</strong> даёт скидку 15%. Подробности <a href=\\\"https://partner.7tix.io/partner/R5ZHBMT\\\" target=\\\"_blank\\\" rel=\\\"noopener\\\">здесь</a>.",
+      "news.trends_text": "18–19 ноября: форум The Trends по технологиям и инвестициям. Промокод <strong>ZHCASH</strong> даёт скидку 15%. Подробности <a href=\"https://partner.7tix.io/partner/R5ZHBMT\" target=\"_blank\" rel=\"noopener\">здесь</a>.",
       "news.updates_title": "Важные новости и рекомендации",
       "news.updates_text": "Основные обновления экосистемы ZHChain и ZeroGravity (EVOLUTION888).",
       "news.solidity_title": "9 лучших платформ Solidity",
@@ -497,7 +497,7 @@
       "footer.rights": "Все права защищены.",
       "footer.license": "Лицензия MIT",
       "footer.privacy": "Политика конфиденциальности",
-      "footer.updated": "Сайт обновлён: 22.01.2026",
+      "footer.updated": "Сайт обновлён: 21.09.2026",
       "footer.useful": "Полезное",
       "footer.useful_docs": "Документация",
       "footer.useful_api": "RPC-API",
@@ -528,7 +528,7 @@
       "footer.ecosystem_navigator": "Навигатор",
       "footer.ecosystem_dao": "DAO",
       "footer.ecosystem_zgf": "Zero Gravity Foundation",
-      "footer.ecosystem_grants": "Грантовые программы",
+      "footer.ecosystem_grants": "Грантовые программы — скоро",
       "footer.ecosystem_nft": "NFT Global Network",
       "footer.ecosystem_jobs": "Вакансии",
     }
@@ -581,7 +581,7 @@
       });
     }
 
-    options?.querySelectorAll("li[data-lang]").forEach((li) => {
+    options?.querySelectorAll("button[data-lang]").forEach((li) => {
       li.addEventListener("click", () => {
         const lang = li.getAttribute("data-lang");
         if (lang) applyLang(lang);
@@ -590,6 +590,9 @@
     });
 
     document.addEventListener("click", () => toggle(false));
+    switcher.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") { toggle(false); current?.focus(); }
+    });
   }
 
   if (document.readyState === "loading") {

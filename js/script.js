@@ -13,23 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const href = link.getAttribute("href");
-      if (href && href.startsWith("#")) {
-        event.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: "smooth" });
-        }
-        body.classList.remove("nav-open");
-        if (toggle) {
-          toggle.setAttribute("aria-expanded", "false");
-        }
-      } else {
-        body.classList.remove("nav-open");
-      }
-    });
+  function closeMenu() {
+    body.classList.remove("nav-open");
+    toggle?.setAttribute("aria-expanded", "false");
+  }
+  navLinks.forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && body.classList.contains("nav-open")) {
+      closeMenu();
+      toggle?.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (header && !header.contains(event.target)) closeMenu();
   });
 
   window.addEventListener("scroll", () => {

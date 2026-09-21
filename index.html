@@ -13,7 +13,7 @@
 <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
 <meta content="no-cache" http-equiv="Pragma"/>
 <meta content="0" http-equiv="Expires"/>
-<link href="css/style.css?v=0.2.12" rel="stylesheet"/>
+<link href="css/style.css?v=20260921" rel="stylesheet"/>
 </head>
 <body class="theme-dark">
 <header class="site-header" id="top">
@@ -31,12 +31,12 @@
 <a data-i18n="nav.docs" href="https://zh.cash/docs/en/" rel="noopener" target="_blank">Docs</a>
 </nav>
 <div aria-label="Select language" class="lang-switcher">
-<button aria-expanded="false" aria-haspopup="listbox" class="lang-current" type="button">
+<button aria-expanded="false" aria-haspopup="true" aria-controls="language-options" class="lang-current" type="button">
 <span class="lang-name" data-i18n="lang.current">English</span>
 </button>
-<ul class="lang-options" hidden="" role="listbox">
-<li data-lang="en" role="option">English</li>
-<li data-lang="ru" role="option">Русский</li>
+<ul class="lang-options" id="language-options" hidden="">
+<li><button type="button" data-lang="en">English</button></li>
+<li><button type="button" data-lang="ru">Русский</button></li>
 </ul>
 </div>
 <div class="nav-actions">
@@ -45,7 +45,7 @@
           </a>
 <a class="btn primary" data-i18n="hero.cta.wallet" href="https://wallet.zeroscan.st" rel="noopener" target="_blank">Wallet</a>
 </div>
-<button aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle" type="button">
+<button aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav" class="nav-toggle" type="button">
 <span></span>
 <span></span>
 <span></span>
@@ -54,9 +54,7 @@
 </header>
 <main>
 <div class="announcement-bar" style="background: linear-gradient(90deg, rgba(56,189,248,0.12), rgba(245,158,11,0.14), rgba(56,189,248,0.12)); border-bottom: 1px solid rgba(245,158,11,0.35); color: #e2e8f0; text-align: center; padding: 14px 20px;">
-<p data-i18n="announce.text" style="margin: 0; font-size: 0.95rem;">
-          Update your node to <strong>Evolution 1.0.0</strong> before <strong>September 10, 2026</strong>. PoS reward halving at block <strong>1,700,000</strong> (~September 20, 2026): <strong>800 ZHC → 400 ZHC</strong>. <a href="#downloads" style="color: #38bdf8; font-weight: 600; text-decoration: underline;">Download now</a>
-</p>
+<p data-i18n="announce.text" style="margin: 0; font-size: 0.95rem;">Evolution 1.0.0 is available. From block <strong>1,700,000</strong>, the PoS block reward is <strong>400 ZHC</strong>. <a href="#downloads">Download node</a></p>
 </div>
 <section class="hero" id="home">
 <div class="hero-media">
@@ -84,7 +82,7 @@
 </div>
 <div>
 <span class="meta-label" data-i18n="hero.meta.genesis">Genesis block</span>
-<a data-i18n="hero.meta.view" href="https://zeroscan.io/block/1" rel="noopener" target="_blank">View on ZeroScan</a>
+<a data-i18n="hero.meta.view" href="https://zeroscan.st/block/1" rel="noopener" target="_blank">View on ZeroScan</a>
 </div>
 <div>
 <span class="meta-label" data-i18n="hero.meta.testnet">Testnet</span>
@@ -178,7 +176,7 @@
 <li data-i18n="about.highlight5">IPoS delegation to supernode pools.</li>
 <li data-i18n="about.highlight6">DPoS rewards for main validators.</li>
 </ul>
-<a class="btn subtle" data-i18n="about.cta" href="http://zeroscan.io/contract/tokens" rel="noopener" target="_blank">
+<a class="btn subtle" data-i18n="about.cta" href="https://zeroscan.st/contract/tokens" rel="noopener" target="_blank">
               Explore tokens
             </a>
 </div>
@@ -200,7 +198,7 @@
 <li data-i18n="tech.block_time">Block time: 120 seconds</li>
 <li data-i18n="tech.block_size">Block size: 2 MB</li>
 <li data-i18n="tech.supply">Total supply: 10 billion ZHC</li>
-<li data-i18n="tech.reward">Block reward: 800 ZHC (~1%)</li>
+<li data-i18n="tech.reward">Block reward: 400 ZHC (from block 1,700,000)</li>
 <li data-i18n="tech.consensus">Consensus: Proof‑of‑Stake (PoS 3.0)</li>
 </ul>
 </div>
@@ -253,8 +251,8 @@
 <article class="card">
 <img alt="PoS" decoding="async" loading="lazy" src="img/sun.svg"/>
 <h3 data-i18n="tech.pos_card_title">PoS mining</h3>
-<p data-i18n="tech.pos_card_text">2 billion ZHC mined by PoS nodes. Block reward 800 ZHC plus transaction fees.</p>
-<a data-i18n="tech.stake_cta" href="https://zeroscan.io/misc/stake-calculator" rel="noopener" target="_blank">
+<p data-i18n="tech.pos_card_text">2 billion ZHC mined by PoS nodes. Block reward 400 ZHC plus transaction fees.</p>
+<a data-i18n="tech.stake_cta" href="https://zeroscan.st/misc/stake-calculator" rel="noopener" target="_blank">
                 Stake calculator
               </a>
 </article>
@@ -305,9 +303,9 @@
             </p>
 </div>
 <div class="wallet-intro">
-<p>
-<strong data-i18n="wallets.official_label">Official release.</strong>
-<span data-i18n="wallets.official_text">The ZHCASH team maintains ZHC Wallet as the primary non-custodial browser PWA wallet for multi-blockchain access. It runs directly in the browser or as an installed PWA. Private keys never leave the user's device. The user alone controls addresses, balances, and transactions.</span>
+<p data-i18n="wallets.official">
+<strong>Official release.</strong>
+<span>The ZHCASH team maintains ZHC Wallet as the primary non-custodial browser PWA wallet for multi-blockchain access. It runs directly in the browser or as an installed PWA. Private keys never leave the user's device. The user alone controls addresses, balances, and transactions.</span>
 </p>
 <p data-i18n="wallets.features">
               ZHC Wallet supports ZHCASH and integrated blockchain networks, including UTXO-compatible networks,
@@ -459,7 +457,7 @@
 <li>
 <span class="timeline-date">2025 — Core Maturity Completion</span>
 <p data-i18n="roadmap.core_maturity">
-                Stable ZHChain operations with long-term uptime, tens of millions of blocks, and expanded
+                Stable ZHChain operations with long-term uptime, a growing block history, and expanded
                 validator/supernode capacity. Strengthened DeFi modules, smart contracts, and internal
                 financial tooling. Preparation for the ecosystem and institutional phase.
               </p>
@@ -757,7 +755,7 @@
 <a href="img/rasvetcooplogo.webp" rel="noopener" target="_blank">
 <img alt="Rasvet Coop" decoding="async" src="img/rasvetcooplogo.webp"/>
 </a>
-<a href="https://zh.cash/img/v3logo.png" rel="noopener" target="_blank">
+<a href="img/v3logo.webp" rel="noopener" target="_blank">
 <img alt="V3 Games" loading="lazy" src="img/v3logo.webp"/>
 </a>
 <a href="img/globalinvesthub.webp" rel="noopener" target="_blank">
@@ -848,16 +846,16 @@
 <a data-i18n="footer.license" href="mit-license.html" rel="noopener" target="_blank">MIT license</a> |
             <a data-i18n="footer.privacy" href="policy.html" rel="noopener" target="_blank">Privacy Policy</a>
 </p>
-<p class="muted" data-i18n="footer.updated">Website last updated: 22.01.2026</p>
+<p class="muted" data-i18n="footer.updated">Website last updated: 21.09.2026</p>
 </div>
 <div class="footer-columns">
 <div>
 <h4 data-i18n="footer.useful">Useful</h4>
 <a data-i18n="footer.useful_docs" href="https://app.zhcash.network/knowledge-base/category/documentation-eng" rel="noopener" target="_blank">Documentation</a>
 <a data-i18n="footer.useful_api" href="https://zh.cash/docs/en/ZHCash-RPC-API/index.html" rel="noopener" target="_blank">RPC-API</a>
-<a data-i18n="footer.useful_tokens" href="https://zeroscan.io/contract/tokens" rel="noopener" target="_blank">Tokens</a>
-<a data-i18n="footer.useful_stake" href="https://zeroscan.io/misc/stake-calculator" rel="noopener" target="_blank">Stake calculator</a>
-<a data-i18n="footer.useful_top_pos" href="https://zeroscan.io/misc/biggest-miners" rel="noopener" target="_blank">Top PoS nodes</a>
+<a data-i18n="footer.useful_tokens" href="https://zeroscan.st/contract/tokens" rel="noopener" target="_blank">Tokens</a>
+<a data-i18n="footer.useful_stake" href="https://zeroscan.st/misc/stake-calculator" rel="noopener" target="_blank">Stake calculator</a>
+<a data-i18n="footer.useful_top_pos" href="https://zeroscan.st/misc/biggest-miners" rel="noopener" target="_blank">Top PoS nodes</a>
 <a data-i18n="footer.useful_solidity" href="https://docs.soliditylang.org/en/develop/index.html" rel="noopener" target="_blank">Solidity doc</a>
 <a data-i18n="footer.useful_remix" href="https://remix.ethereum.org/" rel="noopener" target="_blank">Remix Compiler</a>
 <a data-i18n="footer.useful_guide" href="https://zh.cash/download/Guide_ZHCASH_1.3_alpha_eng.pdf" rel="noopener" target="_blank">Guide for Dev</a>
@@ -869,12 +867,12 @@
 <a data-i18n="footer.info_validators" href="https://zh.cash/download/ZHCASH_for_Validators_EN.pdf" rel="noopener" target="_blank">Validators</a>
 <a data-i18n="footer.info_hypernet" href="https://evolution888.pro" rel="noopener" target="_blank">HyperNet</a>
 <a data-i18n="footer.info_brand" href="https://zh.cash/download/ZHCASH_style_guide.rar" rel="noopener" target="_blank">Brand book</a>
-<a data-i18n="footer.info_bounty" href="https://bounty.zhcash.net" rel="noopener" target="_blank">BOUNTY💎</a>
+<a data-i18n="footer.info_bounty" href="https://bounty.zhchain.sbs" rel="noopener" target="_blank">BOUNTY💎</a>
 </div>
 <div>
 <h4 data-i18n="footer.services">Services</h4>
 <a data-i18n="footer.services_console" href="https://zhcash.org" rel="noopener" target="_blank">Console</a>
-<a data-i18n="footer.services_explorer" href="https://zeroscan.io" rel="noopener" target="_blank">Explorer</a>
+<a data-i18n="footer.services_explorer" href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
 <a data-i18n="footer.services_monitoring" href="https://zhcash.network" rel="noopener" target="_blank">Monitoring</a>
 <a data-i18n="footer.services_checker" href="https://status.zhcash.network" rel="noopener" target="_blank">Node checker</a>
 <a data-i18n="footer.services_support" href="https://app.zhcash.network" rel="noopener" target="_blank">Support hub</a>
@@ -885,7 +883,7 @@
 <a data-i18n="footer.ecosystem_navigator" href="https://zhcash.net" rel="noopener" target="_blank">Navigator</a>
 <a data-i18n="footer.ecosystem_dao" href="https://zerogravity.foundation/dao" rel="noopener" target="_blank">DAO</a>
 <a data-i18n="footer.ecosystem_zgf" href="https://zerogravity.foundation" rel="noopener" target="_blank">Zero Gravity Foundation</a>
-<a data-i18n="footer.ecosystem_grants" href="#soon">Ecosystem Grant Programs</a>
+<span class="muted" data-i18n="footer.ecosystem_grants">Ecosystem Grant Programs — coming soon</span>
 <a data-i18n="footer.ecosystem_nft" href="https://nftmart.art/blog" rel="noopener" target="_blank">NFT Global Network</a>
 <a data-i18n="footer.ecosystem_jobs" href="https://app.zhcash.network/forms/ticket?col=col-md-5" rel="noopener" target="_blank">Jobs</a>
 </div>
@@ -896,9 +894,9 @@
 <span data-i18n="footer.nodes_label">Download nodes:</span>
 <a data-i18n="footer.nodes_github" href="https://github.com/zerohourcash/zerohourcash/releases/tag/v1.0.0" rel="noopener" target="_blank">Linux / Windows (GitHub release)</a>
 <span>·</span>
-<a data-i18n="footer.nodes_macos" href="https://zh.cash/download/nodes/ZHCASH-Qt-macos-arm64-20260718.app.zip">macOS (arm64)</a>
+<a data-i18n="footer.nodes_macos" href="https://github.com/zerohourcash/zerohourcash/releases/download/v1.0.0-macos.1/ZHCASH-Evolution-1.0.0-macos.1-arm64.dmg">macOS (arm64)</a>
 </p>
 </div>
 </footer>
-<script defer="" src="js/i18n.js"></script><script defer="" src="js/script.js"></script></body>
+<script defer="" src="js/i18n.js?v=20260921"></script><script defer="" src="js/script.js?v=20260921"></script></body>
 </html>
