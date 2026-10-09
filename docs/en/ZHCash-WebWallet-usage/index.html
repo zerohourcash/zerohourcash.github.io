@@ -8,9 +8,6 @@
 <meta content="ZHCash Documentation" name="description"/>
 <title>Web Wallet · ZHCash Documentation</title>
 <link href="../../gitbook/images/favicon.ico" rel="icon"/>
-
-
-
 <link href="../docs.css" rel="stylesheet"/>
 </head>
 <body class="docs-theme">
@@ -74,7 +71,7 @@
 <div class="content-inner"><p class="archive-note">Archived documentation (backup: 4 September 2026). Commands and wallet interfaces may differ in current releases.</p>
 <p><strong>IMPORTANT!</strong>
 <strong>When using a web wallet like this one, please make 100% sure that you're entering the right URL which is</strong></p>
-<p><a href="https://wallet.zeroscan.st/" target="_blank">https://wallet.zh.cash</a></p>
+<p><a href="https://wallet.zeroscan.st/" target="_blank">Current ZHC Wallet (interface differs from the archived guide)</a></p>
 <p>There is no other URL being used for the web wallet, please be safe and verify the green padlock with "Secure" in the URL field which validates the site:</p>
 <p><img alt="0. Secure site EN" decoding="async" loading="lazy" src="webwalletssl.png.webp"/></p>
 <p>Welcome to the ZHCash web wallet user documentation which will show </p>
@@ -108,14 +105,13 @@
 <li><a href="#4-restore-from-wif">Restore from WIF</a>  restores an address from a private key</li>
 <li><a href="#5-restore-from-mobile-wallet">Restore from Mobile Wallet</a> restores an address from 12 seed words from a compatible mobile wallet</li>
 <li><a href="#6-restore-from-key-file">Restore from Key File</a> restores an address from a Key File created by the web wallet</li>
-
 </ol>
 <p><img alt="2. Generate New Wallet" decoding="async" loading="lazy" src="../../../img/svg/checkmark.svg"/></p>
 <h3 id="1-generate-new-wallet"><a class="plugin-anchor" href="#1-generate-new-wallet" name="1-generate-new-wallet"><i aria-hidden="true" class="fa fa-link"></i></a>1. Generate New Wallet</h3>
 <p>Now let's choose the first option on the menu screen above and click on the red <strong><code>GENERATE NEW WALLET</code></strong> button. Next, you will enter a password which will be used to create a series of private keys. Write down a new long and strong password, enter the password and click the blue <strong><code>CONFIRM</code></strong> button: </p>
-<p><img alt="3. Enter Password" decoding="async" loading="lazy" src="https://i.imgur.com/6cFzE2p.jpg"/></p>
+<p><img alt="3. Enter Password" decoding="async" loading="lazy" src="images/6cFzE2p.jpg"/></p>
 <p>Next click the large green button to download the Key File:</p>
-<p><img alt="4. Download Key File" decoding="async" loading="lazy" src="https://i.imgur.com/MPlJCXK.jpg"/></p>
+<p><img alt="4. Download Key File" decoding="async" loading="lazy" src="images/MPlJCXK.jpg"/></p>
 <p>The Key File will download to your computer, save the file in a location you can find again and back up the file offline. The key file name will have a format like "1529379436736.txt" where the long number is the file creation time as Unix epoch time in milliseconds. You will need this Key File and the password to reload the wallet. If you lose the Key File or password, the funds in your wallet will be lost.</p>
 <p>The <em>View Wallet Info</em> page will appear for your wallet where you can see:</p>
 <ol>
@@ -124,52 +120,42 @@
 <li>Unconfirmed Balance - coins waiting to be confirmed in the next block</li>
 <li>Private Key - the private key for this address</li>
 </ol>
-
 <h3 id="2-create-from-mnemonic"><a class="plugin-anchor" href="#2-create-from-mnemonic" name="2-create-from-mnemonic"><i aria-hidden="true" class="fa fa-link"></i></a>2. Create from Mnemonic</h3>
 <p>Click on the menu option <strong><code>Create from Mnemonic</code></strong>, <strong><code>GENERATE NEW WALLET</code></strong>, enter a password and click <strong><code>CONFIRM</code></strong>. The wallet will create a new address from 12 random seed words:</p>
-<p><img alt="6. Generate Seed Words" decoding="async" loading="lazy" src="https://i.imgur.com/ioGSwbq.jpg"/></p>
+<p><img alt="6. Generate Seed Words" decoding="async" loading="lazy" src="images/ioGSwbq.jpg"/></p>
 <p>Please write down and save these seed words, only you as the wallet user have access to these seed words (seed words and private keys aren't stored on the server, if you lose these seed words you'll lose access to your funds!).</p>
 <p>Next you have to enter the seed words manually to confirm you have saved them. Click on the blue button <strong><code>I HAVE REMEMBERED ALL. LET'S CHECK</code></strong>, enter your password, re-enter the seed words and click the green <strong><code>CONFIRM</code></strong> button:</p>
-<p><img alt="7. Confirm Seed Words" decoding="async" loading="lazy" src="https://i.imgur.com/1ClZwHq.jpg"/></p>
+<p><img alt="7. Confirm Seed Words" decoding="async" loading="lazy" src="images/1ClZwHq.jpg"/></p>
 <p>Then you will see the <em>View Wallet Info</em> page as shown above. You may want to download a Key File for the wallet using the menu option <strong><code>Dump as Key File</code></strong> which will give another way to restore the wallet as described in step 6 below.</p>
 <h3 id="3-restore-from-mnemonic"><a class="plugin-anchor" href="#3-restore-from-mnemonic" name="3-restore-from-mnemonic"><i aria-hidden="true" class="fa fa-link"></i></a>3. Restore from Mnemonic</h3>
 <p>For the menu option <strong><code>Restore from Mnemonic</code></strong> you will enter the seed words saved in step 2 above. Make sure you enter the seed words correctly (with no typos or additional blank spaces), click the green <strong><code>CONFIRM</code></strong> button:</p>
-<p><img alt="8. Enter Seed Words" decoding="async" loading="lazy" src="https://i.imgur.com/DAU5res.jpg"/></p>
+<p><img alt="8. Enter Seed Words" decoding="async" loading="lazy" src="images/DAU5res.jpg"/></p>
 <p>After entering a new password, you will see the <em>View Wallet Info</em> page. Verify that the expected address was created. You may want to back up the wallet using the menu option <strong><code>Dump As Key File</code></strong>.</p>
 <h3 id="4-restore-from-wif"><a class="plugin-anchor" href="#4-restore-from-wif" name="4-restore-from-wif"><i aria-hidden="true" class="fa fa-link"></i></a>4. Restore from WIF</h3>
 <p>This choice allows restoring the wallet from a Wallet Input Format (WIF) private key such as from the web wallet, ZHCash Core wallet or ZHCash Electrum wallet. A WIF private key will be 52 characters long and has error checking and encoding (to reduce size) as compared with an original private key, which will be 64 hexadecimal characters.</p>
 <p>Copy the WIF private key from another wallet. Select the menu option <strong><code>Restore from WIF</code></strong>, paste the private key into the <em>WIF</em> field and click the green <strong><code>CONFIRM</code></strong> button:</p>
-<p><img alt="9. Restore from WIF" decoding="async" loading="lazy" src="https://i.imgur.com/UxnrajH.jpg"/></p>
+<p><img alt="9. Restore from WIF" decoding="async" loading="lazy" src="images/UxnrajH.jpg"/></p>
 <p>The <em>View Wallet Info</em> page will be displayed. Verify you restored the expected address. You may want to back up the wallet using the menu option <strong><code>Dump As Key File</code></strong>.</p>
 <h3 id="5-restore-from-mobile-wallet"><a class="plugin-anchor" href="#5-restore-from-mobile-wallet" name="5-restore-from-mobile-wallet"><i aria-hidden="true" class="fa fa-link"></i></a>5. Restore from Mobile Wallet</h3>
 <p>Restore from Mobile Wallet allows restoring a wallet address from a compatible mobile wallet such as the ZHCash mobile wallet, Qbao wallet, or the ZHCash Electrum wallet (if the ZHCash Electrum wallet was initialized to be compatible with the ZHCash mobile wallets).</p>
 <p>Select the menu option <strong><code>Restore from Mobile Wallet</code></strong> and enter the 12 seed words from your other wallet. Enter the words carefully in lower case (never in UPPERCASE) and make sure there are no blank spaces after the words, and click the green <strong><code>CONFIRM</code></strong> button:</p>
-<p><img alt="10. Restore from Mobile Wallet EN" decoding="async" loading="lazy" src="https://i.imgur.com/4BS3jFi.jpg"/></p>
+<p><img alt="10. Restore from Mobile Wallet EN" decoding="async" loading="lazy" src="images/4BS3jFi.jpg"/></p>
 <p>Next, choose the address to restore, it will probably be the top address row unless you were using multiple addresses on your mobile. If you don't see the correct address, reenter the seed words carefully. Click the green <strong><code>CHOOSE</code></strong> button for the desired address:</p>
-
 <p>The <em>View Wallet Info</em> page will be displayed. You may want to back up the wallet using the menu option <strong><code>Dump As Key File</code></strong>.</p>
 <h3 id="6-restore-from-key-file"><a class="plugin-anchor" href="#6-restore-from-key-file" name="6-restore-from-key-file"><i aria-hidden="true" class="fa fa-link"></i></a>6. Restore from Key File</h3>
 <p>Select the menu option <strong><code>Restore from Key File</code></strong>, <strong><code>UPLOAD</code></strong>, select the key file to upload and click <strong><code>Open</code></strong>. Enter your password and click the blue <strong><code>CONFIRM</code></strong> button. The <em>View Wallet Info</em> page will be displayed.</p>
-
-
 <hr/>
 <h1 id="receive-and-send-ZHCash-coins"><a class="plugin-anchor" href="#receive-and-send-ZHCash-coins" name="receive-and-send-ZHCash-coins"><i aria-hidden="true" class="fa fa-link"></i></a>Receive and Send ZHCash Coins</h1>
 <h3 id="receive"><a class="plugin-anchor" href="#receive" name="receive"><i aria-hidden="true" class="fa fa-link"></i></a>Receive</h3>
 <p>You can receive coins for the web wallet by sending them to the address of the wallet. Before you send any coins to the wallet make sure you can close and reopen the wallet with the same receive address. Using the menu option <strong><code>Dump as Key File</code></strong> and <strong><code>Restore from Key File</code></strong> is a safe way to do this. Using the menu option to restore from seed words to reopen the wallet is riskier because entering a typo for the seed words or password will create an unexpected random address. </p>
 <p>On the <em>View Wallet Info</em> page click on the blue address <strong><code>COPY</code></strong> button and then paste this address as the receiving address in the sending wallet or account, and then send the coins. Wait a few minutes for the next block to be published and reload the web wallet to see the new balance. You can also click on the menu option <strong><code>View Wallet Txs</code></strong> to see the receiving transaction: </p>
-
 <h3 id="send"><a class="plugin-anchor" href="#send" name="send"><i aria-hidden="true" class="fa fa-link"></i></a>Send</h3>
 <p>From your receiving wallet or account, copy the receiving address. On the web wallet menu, click <strong><code>Send</code></strong> and paste the receiving address into the <em>Address*</em> field, then enter the amount to send in the <em>Amount*</em> field (if you are sending an amount less than 1.0, use a leading zero, like "0.5", not ".5"). You can leave the <em>Fee</em> field set at the default of 0.01 (or set a lower fee if you understand how to do this) and click the green <strong><code>CONFIRM</code></strong> button:</p>
-
 <p>The <em>Please enter address again (Double check)</em> page will be displayed. Copy and paste the receiving address into the <em>Address</em> field and click the blue <strong><code>CONFIRM</code></strong> button:</p>
-
 <p>The <em>You are going to send</em> page will be displayed, after verifying the information click the blue <strong><code>CONFIRM</code></strong> button:</p>
-
 <p>At the bottom of the screen you will see the green confirmation bar with a link to show the transaction in the Explorer: </p>
-
-<p>The <em>View Wallet Info</em> page will display an <em>Unconfirmed balance</em> for the amount being sent (+ fee). 
+<p>The <em>View Wallet Info</em> page will display an <em>Unconfirmed balance</em> for the amount being sent (+ fee).
 After the transaction is published in the next block you can reload the wallet to see the updated balance and also see the transaction using the menu option <strong><code>View Wallet Txs</code></strong>.</p>
-
 <h3 id="safe-send"><a class="plugin-anchor" href="#safe-send" name="safe-send"><i aria-hidden="true" class="fa fa-link"></i></a>Safe Send</h3>
 <p>A basic ZHCash transaction is composed of three steps:</p>
 <ol>
@@ -180,25 +166,24 @@ After the transaction is published in the next block you can reload the wallet t
 <p>"Safe Send" isolates these steps between two computers/wallets, where step 2 is performed with an offline wallet whose private keys are never exposed to the internet. The web wallet "Safe Send" walks through these 3 steps to make a very safe transaction using the offline wallet.</p>
 <h4 id="setup-offline-wallet"><a class="plugin-anchor" href="#setup-offline-wallet" name="setup-offline-wallet"><i aria-hidden="true" class="fa fa-link"></i></a>Setup Offline Wallet</h4>
 <p>For a Safe Send, first set up the offline wallet by getting a copy of the web wallet and browser software. This example will use Google Chrome on Windows, and you can adjust to your preferred browser and operating system.</p>
-<p>On the online computer, using the Chrome browser, go to <a href="https://wallet.zeroscan.st/" target="_blank">https://ZHCashwallet.org</a>. In the browser upper right-hand corner select the three vertical dots for menu, select <strong><code>More tools</code></strong> then <strong><code>Save page as…</code></strong> to save the ZHCash Web Wallet HTML file. This file contains all the JavaScript code to run the web wallet:</p>
-<p><img alt="1 The Web Wallet HTML File" decoding="async" loading="lazy" src="https://i.imgur.com/ZdCBdhu.jpg"/> 
+<p>On the online computer, using the Chrome browser, go to <a href="https://wallet.zeroscan.st/" target="_blank">Current ZHC Wallet (interface differs from the archived guide)</a>. In the browser upper right-hand corner select the three vertical dots for menu, select <strong><code>More tools</code></strong> then <strong><code>Save page as…</code></strong> to save the ZHCash Web Wallet HTML file. This file contains all the JavaScript code to run the web wallet:</p>
+<p><img alt="1 The Web Wallet HTML File" decoding="async" loading="lazy" src="images/ZdCBdhu.jpg"/>
 The Web Wallet HTML file</p>
 <p>To make an offline copy of Chrome, navigate to find the Chrome install folder on your computer. For Windows it is typically in Program Files (x86) - Google:</p>
-<p><img alt="2019-42 Chrome Folder" decoding="async" loading="lazy" src="https://i.imgur.com/us44CuH.png"/>
+<p><img alt="2019-42 Chrome Folder" decoding="async" loading="lazy" src="images/us44CuH.png"/>
 Copy Chrome folder</p>
 <p>Copy the Chrome folder and Web Wallet HTML file to a USB thumb drive and then copy these to the offline computer.</p>
 <p>This gives a copy of the current Chrome and web wallet for the offline computer, and will not get any future version updates. You can do an update with these same steps, but it should not be necessary for these basic operations.</p>
 <h4 id="launch-the-wallet-in-offline-mode"><a class="plugin-anchor" href="#launch-the-wallet-in-offline-mode" name="launch-the-wallet-in-offline-mode"><i aria-hidden="true" class="fa fa-link"></i></a>Launch the wallet in Offline Mode</h4>
 <p>On the offline computer, launch the Chrome browser: in the copied Chrome folder select User Data - Application - Chrome.exe:</p>
-<p><img alt="2019-43 Select Chrome.exe" decoding="async" loading="lazy" src="https://i.imgur.com/vZ4oSZ1.jpg"/> 
+<p><img alt="2019-43 Select Chrome.exe" decoding="async" loading="lazy" src="images/vZ4oSZ1.jpg"/>
 (here in a folder called "Offline wallet")</p>
 <h4 id="launch-the-offline-web-wallet"><a class="plugin-anchor" href="#launch-the-offline-web-wallet" name="launch-the-offline-web-wallet"><i aria-hidden="true" class="fa fa-link"></i></a>Launch the offline web wallet</h4>
 <p>With the cursor in the Chrome URL address bar press Control - "O" (for Open) and then navigate to and Open the ZHCash Web Wallet.html file:</p>
-<p><img alt="2019-44 Open ZHCash Web Wallet.html" decoding="async" loading="lazy" src="https://i.imgur.com/EyE4B1x.jpg"/></p>
+<p><img alt="2019-44 Open ZHCash Web Wallet.html" decoding="async" loading="lazy" src="images/EyE4B1x.jpg"/></p>
 <p>Using the web wallet menu select Settings and in the Mode dropdown select <strong><code>Offline</code></strong> and <strong><code>CONFIRM</code></strong>:</p>
-<p><img alt="2019-45 Set Offine Mode" decoding="async" loading="lazy" src="https://i.imgur.com/JLAvVTO.jpg"/></p>
+<p><img alt="2019-45 Set Offine Mode" decoding="async" loading="lazy" src="images/JLAvVTO.jpg"/></p>
 <p>Note the gold header for the wallet in offline mode. From this point, you can generate a new wallet and save (and backup) the key file. The menu will show <em>Request Payment</em> and the <em>Request Payment</em> page will show the receiving address for the offline wallet:</p>
-
 <p>Copy the receiving address to a text file and copy to the USB thumb drive for transfer to the online computer. Now you can send ZHCash to this address to fund the offline wallet.</p>
 <p>This works to send ZHCash to the offline wallet address because ZHCash coins are actually stored as unspent transactions on the blockchain (no coins are ever stored in any wallet itself). However the offline wallet holds the private key for its address, and only the offline wallet can sign transactions to send ZHCash from its address.</p>
 <p>Now we can use the 3 transaction steps for a Safe Send.</p>
@@ -242,15 +227,12 @@ Step 3 - send the tx file to the network to complete the transaction
 --&gt;
 <h3 id="send-ZRC20-tokens"><a class="plugin-anchor" href="#send-ZRC20-tokens" name="send-ZRC20-tokens"><i aria-hidden="true" class="fa fa-link"></i></a>Send ZRC20 Tokens</h3>
 <p>To send ZRC20 tokens you must have sufficient ZHCash coins in the address tied to that token. The web wallet default fee for sending tokens is 0.00000040 gas price x 250,000 gas = 0.1 ZHCash plus the default transaction fee of 0.01 ZHCash, for a total fee of 0.11 ZHCash. You can use these default values unless you understand how to set lower values, but don't worry, any excess gas will be refunded as a mined amount (the mined amount must mature for 500 blocks before it can be sent or used for gas/fees).</p>
-
 <hr/>
 <h1 id="adding-a-ZRC20-token"><a class="plugin-anchor" href="#adding-a-ZRC20-token" name="adding-a-ZRC20-token"><i aria-hidden="true" class="fa fa-link"></i></a>Adding a ZRC20 Token</h1>
 <p>The web wallet will has built-in capability for popular ZRC20 tokens, and you can add additional tokens by entering the token's smart contract information. For example, if you want to add the XYZ token, find that token on the Explorer ZHCash.info, copy the contract <em>Address Hash</em> field: </p>
-
 <p>On the web wallet select the menu option <strong><code>Send</code></strong>, click the drop down next to "ZHCash", scroll to the bottom of the Coin/Token list and click the <strong><code>More...</code></strong> button:</p>
-
 <p>Paste the Address Hash copied from the Explorer into the <em>Token Contract Address</em> field and click the blue <strong><code>SEARCH</code></strong> button:</p>
-<p><img alt="28. Enter Address Hash EN" decoding="async" loading="lazy" src="https://i.imgur.com/i8vYHE4.jpg"/></p>
+<p><img alt="28. Enter Address Hash EN" decoding="async" loading="lazy" src="images/i8vYHE4.jpg"/></p>
 <p>The contract details should be displayed on the <em>Token</em> page, verify and click the <strong><code>CONFIRM</code></strong> button to add this token to your wallet. The new token will be available in the wallet for 30 days, after which you can add it again if needed. </p>
 <hr/>
 <h1 id="how-to-publish-smart-contracts"><a class="plugin-anchor" href="#how-to-publish-smart-contracts" name="how-to-publish-smart-contracts"><i aria-hidden="true" class="fa fa-link"></i></a>How to Publish Smart Contracts</h1>
@@ -258,21 +240,19 @@ Step 3 - send the tx file to the network to complete the transaction
 <h3 id="create-token"><a class="plugin-anchor" href="#create-token" name="create-token"><i aria-hidden="true" class="fa fa-link"></i></a>Create Token</h3>
 <p>The <strong><code>Create Token</code></strong> menu option gives an easy way to create ZRC-20 tokens using a built-in contract creation transaction.</p>
 <p>Select <strong><code>Create Token</code></strong> on the menu and fill in the <em>Create Token</em> form:</p>
-
 <p>For <em>Token Name</em> enter a descriptive name, here “My Test Token”. For <em>Token Symbol</em> enter an appropriate symbol. The symbols are not unique, you can reuse any existing symbol name or make a new one.</p>
 <p>Leave <em>Decimals</em> set to the recommended 8 unless you have a good reason to change. With 8 decimals the tokens will be created in Satoshis, where the amount for 1.0 will be represented by 100,000,000 in the smart contract (move the decimal point 8 places to the left to convert Satoshis to units).</p>
 <p>Enter the <em>Total Supply</em> of tokens to create, 100 million is a typical number.</p>
 <p>Leave <em>Gas Price</em>, <em>Gas Limit</em> and <em>Fee</em> set as is, unless you understand how to make changes. If <em>Gas Limit</em> is set too low, the contract creation transaction will run out of gas and fail. For the default settings to the total fee for the token creation contract will be 2,500,000 x 0.00000040 + 0.01 = 1.01 ZHCash, so the wallet must have at least this amount and any excess gas will be refunded.</p>
 <p>Press the green <strong><code>CONFIRM</code></strong> button. On the <em>Do you confirm to create this Token</em> screen review the raw transaction and press the blue <strong><code>CONFIRM</code></strong> button.</p>
-<p><img alt="2019-11 Do you confirm to create this token" decoding="async" loading="lazy" src="https://i.imgur.com/UvD5aVc.jpg"/></p>
+<p><img alt="2019-11 Do you confirm to create this token" decoding="async" loading="lazy" src="images/UvD5aVc.jpg"/></p>
 <p>You will see the green <em>Successful send</em> bar at the bottom of the screen:</p>
-
 <p>Follow the link to see the contract creation transaction on the blockchain (after the next block is published).</p>
 <p>Note that contracts are referenced using their address hash which is a 40-character hexadecimal address and just another way to represent a ZHCash “Q” address.</p>
-<p>From this point, you can add the new token to your wallet as shown above <a href="https://github.com/ZHCashproject/documents/tree/master/en/ZHCash-WebWallet-usage#adding-a-ZRC20-token" target="_blank">Adding a ZRC20 Token</a>.</p>
+<p>From this point, you can add the new token to your wallet as shown above <a href="#adding-a-ZRC20-token">Adding a ZRC20 Token</a>.</p>
 <h3 id="create-contract"><a class="plugin-anchor" href="#create-contract" name="create-contract"><i aria-hidden="true" class="fa fa-link"></i></a>Create Contract</h3>
-<p><strong><code>Create Contract</code></strong> allows publishing of any kind of smart contract. To create the contract, start by writing Solidity code and compile to bytecode using a web IDE (Integrated Development Environment) like <a href="https://qmix.blockchainspaceman.com/" target="_blank">qmix</a> or <a href="http://remix.ethereum.org/" target="_blank">remix</a> or a command line tool like <a href="https://github.com/ZHCashproject/solar" target="_blank">solar</a>.</p>
-<p>Here is an example using the remix website at <a href="http://remix.ethereum.org/" target="_blank">http://remix.ethereum.org</a> for a contract which tracks name and age:</p>
+<p><strong><code>Create Contract</code></strong> allows publishing of any kind of smart contract. To create the contract, start by writing Solidity code and compile to bytecode using a web IDE (Integrated Development Environment) like <a aria-disabled="true" class="unavailable-link" data-original-href="https://qmix.blockchainspaceman.com/" title="External service unavailable at the latest check / Внешний сервис недоступен при последней проверке">qmix</a> or <a href="https://remix.ethereum.org/" target="_blank">remix</a> or a command line tool like <a aria-disabled="true" class="unavailable-link" data-original-href="https://github.com/ZHCashproject/solar" title="External service unavailable at the latest check / Внешний сервис недоступен при последней проверке">solar</a>.</p>
+<p>Here is an example using the remix website at <a href="https://remix.ethereum.org/" target="_blank">http://remix.ethereum.org</a> for a contract which tracks name and age:</p>
 <pre><code>pragma solidity &gt;= 0.5.1 &lt; 0.6.0;   // use only these versions of Solidity
 
 contract NameAndAge{
@@ -290,7 +270,7 @@ contract NameAndAge{
         name = newName;
     }
 
-    // get the age - not a transaction, no gas required 
+    // get the age - not a transaction, no gas required
     function getAge() public view returns (uint256) {
         return yearsAge;
     }
@@ -302,36 +282,34 @@ contract NameAndAge{
 }
 </code></pre><p>To enter this contract into the wallet, the source code needs to be compiled to bytecode and the ABI (Application Binary Interface) created.</p>
 <p>Copy and paste the Solidity code into <em>remix</em> and press the <strong><code>Bytecode</code></strong> button to copy the bytecode into the clipboard, then save the results in a text file.</p>
-<p><img alt="2019-13 remix" decoding="async" loading="lazy" src="https://i.imgur.com/6Db8Xay.png"/></p>
+<p><img alt="2019-13 remix" decoding="async" loading="lazy" src="images/6Db8Xay.png"/></p>
 <p>The actual bytecode (outlined in red below) begins with “6080” and is about 1,200 bytes in length.</p>
-<p><img alt="2019-14 bytecode" decoding="async" loading="lazy" src="https://i.imgur.com/61fwWHg.jpg"/></p>
+<p><img alt="2019-14 bytecode" decoding="async" loading="lazy" src="images/61fwWHg.jpg"/></p>
 <p>Also, press the <strong><code>ABI</code></strong> button to copy the ABI text into the clipboard and save to the same text file with the bytecode.</p>
 <p>Now we can publish the contract. On the web wallet menu select <strong><code>Create Contract</code></strong>, copy and paste the bytecode (the hex string given by "object" as shown above) into the <em>Byte Code</em> field. Leave the <em>Gas Price</em>, <em>Gas Limit</em> and <em>Fee</em> fields set for the default unless you understand how to change these. The default settings will give a fee of 2,500,000 x 0.0000004 + 0.01 = 1.01 ZHCash. Your wallet will need at least this much ZHCash to publish the contract. Press the green <strong><code>CONFIRM</code></strong> button to continue:</p>
-<p><img alt="2019-15 Create Contract" decoding="async" loading="lazy" src="https://i.imgur.com/dJAyKga.jpg"/> </p>
+<p><img alt="2019-15 Create Contract" decoding="async" loading="lazy" src="images/dJAyKga.jpg"/> </p>
 <p>On the next page <em>Do you confirm to publish this contract?</em> review the raw transaction and press the blue <strong><code>CONFIRM</code></strong> button:</p>
-<p><img alt="2019-16 Do you confirm to publish this contract" decoding="async" loading="lazy" src="https://i.imgur.com/nayWRoW.jpg"/> </p>
+<p><img alt="2019-16 Do you confirm to publish this contract" decoding="async" loading="lazy" src="images/nayWRoW.jpg"/> </p>
 <p>See the green <em>Successful send</em> bar at the bottom of the screen. You can follow the link to see the contract create transaction on the Explorer (after the next block is published). </p>
-
 <p>From the contract creation transaction on the Explorer, copy the <em>Contract Address</em> (40 hex characters) for use in the next steps:</p>
-
 <h3 id="send-to-contract"><a class="plugin-anchor" href="#send-to-contract" name="send-to-contract"><i aria-hidden="true" class="fa fa-link"></i></a>Send to Contract</h3>
 <p><strong><code>Send to Contract</code></strong> is used to change the memory values of the contract, for example, transferring tokens or changing storage for variables in the contract’s state database. The send to contract transaction requires a fee and gas payment, so you will need sufficient ZHCash in the wallet. Continuing the above example we will send to contract to set the name and age.</p>
 <p>On the menu, press <strong><code>Send to Contract</code></strong>. On the <em>Send to Contract</em> page copy and paste the <em>Contract Address</em> and the <em>ABI</em> into their fields (the ABI for this contract is about 60 lines of text, the bottom few lines are visible in the scrolling window below).</p>
 <p>On the <em>Method</em> row (not shown below), click the drop-down arrow and select the <em>setName</em> method, and in the <em>newName</em> field enter the name to set, here "Nakamoto". Press the green <strong><code>CONFIRM</code></strong> button to continue.</p>
-<p><img alt="2019-19 Send to Contract" decoding="async" loading="lazy" src="https://i.imgur.com/S0QDtdR.jpg"/> </p>
+<p><img alt="2019-19 Send to Contract" decoding="async" loading="lazy" src="images/S0QDtdR.jpg"/> </p>
 <p>On the next <em>Do you confirm?</em> page review the raw transaction and press the blue <strong><code>CONFIRM</code></strong> button to send the transaction:</p>
-<p><img alt="2019-20 Do you confirm" decoding="async" loading="lazy" src="https://i.imgur.com/izdC8ci.jpg"/> </p>
+<p><img alt="2019-20 Do you confirm" decoding="async" loading="lazy" src="images/izdC8ci.jpg"/> </p>
 <p>See the green <em>Successful send</em> bar, and you can follow the link to the Explorer to see the transaction (after the next block is published).</p>
 <p>Use the same <strong><code>Send to Contract</code></strong> steps to select the <em>setAge</em> method, enter a <em>newAge</em> of 25 and send the transaction.</p>
 <h3 id="contract-call"><a class="plugin-anchor" href="#contract-call" name="contract-call"><i aria-hidden="true" class="fa fa-link"></i></a>Contract Call</h3>
 <p>Calling the contract reads state variables in the local copy of the blockchain (in the ZHCash State database) for the web wallet’s server node (without the need for a transaction using gas) and gives an immediate result since there is no need to wait for the next block to publish. For contract calls enter the contract address and the ABI interface.</p>
 <p>On the web wallet menu select <strong><code>Contract Call</code></strong>. On the <em>Contract Call</em> page paste in the contract address and ABI. On the <em>Method</em> row (not shown below) press the drop-down arrow and select the <em>getName</em> method. Notice there are no fields for gas or fees since none are required. Press the green <strong><code>CONFIRM button</code></strong>:</p>
-<p><img alt="2019-21 Call Contract" decoding="async" loading="lazy" src="https://i.imgur.com/2aAR0QL.jpg"/> </p>
+<p><img alt="2019-21 Call Contract" decoding="async" loading="lazy" src="images/2aAR0QL.jpg"/> </p>
 <p>The Result will come back immediately:</p>
-<p><img alt="2019-22 Result for getName" decoding="async" loading="lazy" src="https://i.imgur.com/WlT49Bb.jpg"/> </p>
+<p><img alt="2019-22 Result for getName" decoding="async" loading="lazy" src="images/WlT49Bb.jpg"/> </p>
 <p>The contract data is in hexadecimal, converting “4e616b616d6f746f” hex to ASCII gives “Nakamoto” as set above.</p>
 <p>Using the same <strong><code>Call Contract</code></strong> steps to select <em>getAge</em> will return:</p>
-<p><img alt="2019-23 Result for getAge" decoding="async" loading="lazy" src="https://i.imgur.com/goLbJfH.jpg"/></p>
+<p><img alt="2019-23 Result for getAge" decoding="async" loading="lazy" src="images/goLbJfH.jpg"/></p>
 <p>Converting hexadecimal 19 to decimal gives 25 as set above.</p>
 </div>
 </main>
