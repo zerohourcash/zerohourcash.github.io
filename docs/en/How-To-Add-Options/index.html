@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ZHCash Documentation" name="description"/>
+<title>How to Add Options · ZHCash Documentation</title>
+<link href="../../gitbook/images/favicon.ico" rel="icon"/>
+
+
+
+<link href="../docs.css" rel="stylesheet"/>
+</head>
+<body class="docs-theme">
+<header class="docs-header">
+<div class="container header-inner">
+<a class="brand" href="../../../index.html">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../../img/logo.webp"/>
+</a>
+<nav class="header-nav">
+<a href="../../../index.html">Main site</a>
+<a class="active" href="../index.html">Docs</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</nav>
+</div>
+</header>
+<div class="docs-layout">
+<aside class="docs-sidebar">
+<div class="sidebar-brand">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../../img/logo.webp"/>
+<p>Documentation</p>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section">
+<span class="nav-title">Introduction</span>
+<a href="../index.html">Introduction</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Using the ZHCash wallet</span>
+<a href="../ZHCash-Wallet-Tutorial/index.html">Desktop wallet basic usage</a>
+<a href="../ZHCash-wallet-usage-best-practices/index.html">Best Practices</a>
+<a href="../updateZHCash/index.html">How to Update your ZHCash wallet</a>
+<a href="../commands/index.html">ZHCash Core Wallet Commands</a>
+<a href="../Adding-Nodes/index.html">Adding Nodes</a>
+<a href="../Encrypt-and-Unlock-ZHCash-Wallet/index.html">Encrypt and Unlock ZHCash Wallet</a>
+<a href="../Wallet-Recovery-with-Salvagewallet.html">Wallet Recovery With Salvagewallet</a>
+<a href="../bech32/index.html">bech32 support</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Other ZHCash wallets</span>
+<a href="../ZHCash-WebWallet-usage/index.html">Web Wallet</a>
+<a href="../How-to-use-ZHCash-Android-Wallet/index.html">How to use ZHCash Android Wallet</a>
+<a href="../ZHCash-Exchange-Usage-Guide-and-Info.html">ZHCash Exchange Usage Guide</a>
+<a class="active" href="index.html">How to Add Options</a>
+<a href="../How-to-Use-Bootstrap/index.html">How to Use bootstrap.dat</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Developer &amp; RPC</span>
+<a href="../ZHCash-RPC-API/index.html">ZHCash RPC API</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Resources</span>
+<a href="https://zhcash.net" rel="noopener" target="_blank">Community</a>
+<a href="../../../index.html">Main site</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</div>
+</nav>
+</aside>
+<main class="docs-content">
+<div class="content-inner"><p class="archive-note">Archived documentation (backup: 4 September 2026). Commands and wallet interfaces may differ in current releases.</p>
+<h1 id="how-to-add-options-for-ZHCash-node（or-add-config-file）"><a class="plugin-anchor" href="#how-to-add-options-for-ZHCash-node（or-add-config-file）" name="how-to-add-options-for-ZHCash-node（or-add-config-file）"><i aria-hidden="true" class="fa fa-link"></i></a>How to add options for ZHCash node（or add config file）</h1>
+<p>User can specify extra options (or set configurations) for ZHCash node, in order to enable/disable some specific features, other than default settings.</p>
+<p>This tutorial describes how to specify options (or configurations) to ZHCash node.</p>
+<h2 id="for-ZHCash-pc-wallet（ZHCash-core-qt-wallet）"><a class="plugin-anchor" href="#for-ZHCash-pc-wallet（ZHCash-core-qt-wallet）" name="for-ZHCash-pc-wallet（ZHCash-core-qt-wallet）"><i aria-hidden="true" class="fa fa-link"></i></a>For ZHCash PC wallet（ZHCash Core qt wallet）</h2>
+<p>(<strong><em>This works for both PC wallet and command-line zerohourd wallet</em></strong>)</p>
+<p>ZHCash PC wallet (i.e. ZHCash core qt wallet) is the most widely used ZHCash wallet by common users. (Not yet installed a wallet? Please visit <a href="../../../index.html" target="_blank">https://zh.cash</a> to download latest pc wallet）</p>
+<p>User can edit ZHCash config file to specify some options.</p>
+<p>Instructions:</p>
+<h3 id="1-create-ZHCashconf-file"><a class="plugin-anchor" href="#1-create-ZHCashconf-file" name="1-create-ZHCashconf-file"><i aria-hidden="true" class="fa fa-link"></i></a>1. Create <code>zerohour.conf</code> file</h3>
+<p>Create a file named <code>zerohour.conf</code> under your <code>datadir</code>, the default datadir paths for different OS are different:</p>
+<ul>
+<li>Linux: ~/.ZHCash</li>
+<li>OSX: ~/Library/Application Support/ZHCash</li>
+<li>Windows: %APPDATA%\ZHCash (Please paste this path to your windows explorer, the path will be resolved automatically)</li>
+</ul>
+<p><strong><em>Please be careful and don‘t remove or change any content under this directory except you are aware of them.</em></strong></p>
+<p>（PS: the <code>datadir</code> might be manually set as well, so please create your zerohour.conf under the datadir you spcified, if you did)</p>
+<p>Still don't know how to create a file? You can also open this <code>zerohour.conf</code> on the wallet UI directly <code>System Preference-&gt;OPEN CONFIGURATION FILE</code>:</p>
+<p><img alt="Open-ZHCash-Conf-In-Wallet" decoding="async" loading="lazy" src="zhwalletoptions.png.webp"/></p>
+<p>This will create and open the <code>zerohour.conf</code> directly for user.</p>
+<h3 id="2-specify-the-options"><a class="plugin-anchor" href="#2-specify-the-options" name="2-specify-the-options"><i aria-hidden="true" class="fa fa-link"></i></a>2. Specify the options</h3>
+<p>User can then specify any option in the file <code>zerohour.conf</code> just created.</p>
+<p>For example, to specify some rpc related settings, user might add following lines to <code>zerohour.conf</code>: </p>
+<pre><code>rpcuser=test
+rpcpassword=test1234
+server=1
+</code></pre><p>This will set rpcuser to <code>test</code>, rpcpassword to <code>test1234</code>, and enable the <code>server</code> feature.</p>
+<h3 id="3-restart-wallet"><a class="plugin-anchor" href="#3-restart-wallet" name="3-restart-wallet"><i aria-hidden="true" class="fa fa-link"></i></a>3. Restart wallet</h3>
+<p>It is required to RESTART the wallet after editing the <code>zerohour.conf</code> file, before the options are really effective.</p>
+<h3 id="other-options"><a class="plugin-anchor" href="#other-options" name="other-options"><i aria-hidden="true" class="fa fa-link"></i></a>Other options</h3>
+<p>To learn more about the complete list of all valid ZHCash options, please check the pc wallet menu for more details:</p>
+<p><code>Help-&gt;Command-line Options</code>:</p>
+<p><img alt="Help Command-line Options" decoding="async" loading="lazy" src="zhwalcomoption.png.webp"/></p>
+<h2 id="for-the-command-line-wallet-ZHCashd"><a class="plugin-anchor" href="#for-the-command-line-wallet-ZHCashd" name="for-the-command-line-wallet-ZHCashd"><i aria-hidden="true" class="fa fa-link"></i></a>For the command-line wallet <code>zerohourd</code></h2>
+<p>If your have no idea about command line, please ignore this section.</p>
+<p>For those who are familiar with command line, you can also specify options by adding options when running <code>zerohourd</code>.</p>
+<p>For example：</p>
+<pre><code>./zerohourd -rpcuser=test -rpcpassword=test1234 -server=1
+</code></pre><p>These options <code>-rpcuser=test -rpcpassword=test1234 -server=1</code> realize the same configuration setting as the "Specify the options" section described.</p>
+<p>Note that if you specify the options through <code>zerohourd</code> command line, same options will be required to add to corresponding <code>zerohour-cli</code> command, e.g.:</p>
+<pre><code>./zerohour-cli -rpcuser=test -rpcpassword=test1234 getinfo
+</code></pre><h3 id="check-options-list-by-command-line"><a class="plugin-anchor" href="#check-options-list-by-command-line" name="check-options-list-by-command-line"><i aria-hidden="true" class="fa fa-link"></i></a>Check options list by command line</h3>
+<p>You can check the complete option list with：</p>
+<pre><code>./zerohourd -help
+</code></pre>
+</div>
+</main>
+</div>
+<footer class="docs-footer">
+<div class="container footer-inner">
+<p>Need updates or community resources?</p>
+<a class="btn subtle" href="https://zhcash.net" rel="noopener" target="_blank">ZHCash Community</a>
+</div>
+</footer>
+</body>
+</html>

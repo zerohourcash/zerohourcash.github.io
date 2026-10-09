@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ZHCash Documentation" name="description"/>
+<title>Wallet Recovery With Salvagewallet</title>
+<link href="../gitbook/images/favicon.ico" rel="icon"/>
+
+
+
+<link href="docs.css" rel="stylesheet"/>
+</head>
+<body class="docs-theme">
+<header class="docs-header">
+<div class="container header-inner">
+<a class="brand" href="../../index.html">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../img/logo.webp"/>
+</a>
+<nav class="header-nav">
+<a href="../../index.html">Main site</a>
+<a class="active" href="index.html">Docs</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</nav>
+</div>
+</header>
+<div class="docs-layout">
+<aside class="docs-sidebar">
+<div class="sidebar-brand">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../img/logo.webp"/>
+<p>Documentation</p>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section">
+<span class="nav-title">Introduction</span>
+<a href="index.html">Introduction</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Using the ZHCash wallet</span>
+<a href="ZHCash-Wallet-Tutorial/index.html">Desktop wallet basic usage</a>
+<a href="ZHCash-wallet-usage-best-practices/index.html">Best Practices</a>
+<a href="updateZHCash/index.html">How to Update your ZHCash wallet</a>
+<a href="commands/index.html">ZHCash Core Wallet Commands</a>
+<a href="Adding-Nodes/index.html">Adding Nodes</a>
+<a href="Encrypt-and-Unlock-ZHCash-Wallet/index.html">Encrypt and Unlock ZHCash Wallet</a>
+<a class="active" href="Wallet-Recovery-with-Salvagewallet.html">Wallet Recovery With Salvagewallet</a>
+<a href="bech32/index.html">bech32 support</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Other ZHCash wallets</span>
+<a href="ZHCash-WebWallet-usage/index.html">Web Wallet</a>
+<a href="How-to-use-ZHCash-Android-Wallet/index.html">How to use ZHCash Android Wallet</a>
+<a href="ZHCash-Exchange-Usage-Guide-and-Info.html">ZHCash Exchange Usage Guide</a>
+<a href="How-To-Add-Options/index.html">How to Add Options</a>
+<a href="How-to-Use-Bootstrap/index.html">How to Use bootstrap.dat</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Developer &amp; RPC</span>
+<a href="ZHCash-RPC-API/index.html">ZHCash RPC API</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Resources</span>
+<a href="https://zhcash.net" rel="noopener" target="_blank">Community</a>
+<a href="../../index.html">Main site</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</div>
+</nav>
+</aside>
+<main class="docs-content">
+<div class="content-inner"><p class="archive-note">Archived documentation (backup: 4 September 2026). Commands and wallet interfaces may differ in current releases.</p>
+<h1 id="recovery-wallet-data-with-salvagewallet"><a class="plugin-anchor" href="#recovery-wallet-data-with-salvagewallet" name="recovery-wallet-data-with-salvagewallet"><i aria-hidden="true" class="fa fa-link"></i></a>Recovery wallet data with salvagewallet</h1>
+<p>This is a very helpful method to recovery your wallet data. It can fix following issues.</p>
+<ul>
+<li>Incorrect balance</li>
+<li>Broken wallet</li>
+<li>Wallet launching issue</li>
+</ul>
+<p><strong>PLEASE make sure backup your wallet before below operations. These operations may break your wallet.</strong></p>
+<h2 id="windows-wallet-turtorial"><a class="plugin-anchor" href="#windows-wallet-turtorial" name="windows-wallet-turtorial"><i aria-hidden="true" class="fa fa-link"></i></a>Windows wallet turtorial</h2>
+<p>Let's take Windows 10 as example. Other windows are similar.</p>
+<p>Firstly please find the shortcut of <em>ZHCash-Qt</em>. It's on the desktop or the start menu. Copy it to the desktop.</p>
+<p><span class="missing-illustration">[Historical screenshot is not present in the archive.]</span>
+<span class="missing-illustration">[Historical screenshot is not present in the archive.]</span></p>
+<p>Right click on the short cut, click on <strong>Properties</strong> and click on <strong>Shortcut</strong>. Then add <code>--salvagewallet</code> to the end of <strong>Target</strong>.</p>
+<p><span class="missing-illustration">[Historical screenshot is not present in the archive.]</span></p>
+<p>Click on <strong>OK</strong>. The dialogue will be closed.</p>
+<p>Now double click on the shortcut. The wallet will launch and reindex blocks.</p>
+<p><span class="missing-illustration">[Historical screenshot is not present in the archive.]</span></p>
+<p>We can have a look at the data menu of ZHCash. Open menu <code>%APPDATA%\ZHCash</code>. <strong>Please be careful and don't remove or change any content under this menu except you are aware of them.</strong></p>
+<p><span class="missing-illustration">[Historical screenshot is not present in the archive.]</span></p>
+<p>Now the old wallet has been backed up to <code>wallet.1516172743.bak</code>. The wallet is using the new <code>wallet.dat</code> file. It contains all private keys with brand new data.</p>
+<p>After the above steps, it's better to remove the shortcut on the desktop in order not to reindex your wallet next time.</p>
+</div>
+</main>
+</div>
+<footer class="docs-footer">
+<div class="container footer-inner">
+<p>Need updates or community resources?</p>
+<a class="btn subtle" href="https://zhcash.net" rel="noopener" target="_blank">ZHCash Community</a>
+</div>
+</footer>
+</body>
+</html>

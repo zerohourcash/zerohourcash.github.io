@@ -25,3 +25,7 @@ html { scroll-padding-top: 100px; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+.unavailable-link { opacity: .65; cursor: default; }
+.unavailable-link::after { content: " (unavailable)"; font-size: .75em; }
+html[lang="ru"] .unavailable-link::after { content: " (недоступно)"; }

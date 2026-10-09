@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ZHCash Documentation" name="description"/>
+<title>How to Use bootstrap.dat · ZHCash Documentation</title>
+<link href="../../gitbook/images/favicon.ico" rel="icon"/>
+
+
+
+<link href="../docs.css" rel="stylesheet"/>
+</head>
+<body class="docs-theme">
+<header class="docs-header">
+<div class="container header-inner">
+<a class="brand" href="../../../index.html">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../../img/logo.webp"/>
+</a>
+<nav class="header-nav">
+<a href="../../../index.html">Main site</a>
+<a class="active" href="../index.html">Docs</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</nav>
+</div>
+</header>
+<div class="docs-layout">
+<aside class="docs-sidebar">
+<div class="sidebar-brand">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../../img/logo.webp"/>
+<p>Documentation</p>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section">
+<span class="nav-title">Introduction</span>
+<a href="../index.html">Introduction</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Using the ZHCash wallet</span>
+<a href="../ZHCash-Wallet-Tutorial/index.html">Desktop wallet basic usage</a>
+<a href="../ZHCash-wallet-usage-best-practices/index.html">Best Practices</a>
+<a href="../updateZHCash/index.html">How to Update your ZHCash wallet</a>
+<a href="../commands/index.html">ZHCash Core Wallet Commands</a>
+<a href="../Adding-Nodes/index.html">Adding Nodes</a>
+<a href="../Encrypt-and-Unlock-ZHCash-Wallet/index.html">Encrypt and Unlock ZHCash Wallet</a>
+<a href="../Wallet-Recovery-with-Salvagewallet.html">Wallet Recovery With Salvagewallet</a>
+<a href="../bech32/index.html">bech32 support</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Other ZHCash wallets</span>
+<a href="../ZHCash-WebWallet-usage/index.html">Web Wallet</a>
+<a href="../How-to-use-ZHCash-Android-Wallet/index.html">How to use ZHCash Android Wallet</a>
+<a href="../ZHCash-Exchange-Usage-Guide-and-Info.html">ZHCash Exchange Usage Guide</a>
+<a href="../How-To-Add-Options/index.html">How to Add Options</a>
+<a class="active" href="index.html">How to Use bootstrap.dat</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Developer &amp; RPC</span>
+<a href="../ZHCash-RPC-API/index.html">ZHCash RPC API</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Resources</span>
+<a href="https://zhcash.net" rel="noopener" target="_blank">Community</a>
+<a href="../../../index.html">Main site</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</div>
+</nav>
+</aside>
+<main class="docs-content">
+<div class="content-inner"><p class="archive-note">Archived documentation (backup: 4 September 2026). Commands and wallet interfaces may differ in current releases.</p>
+<h1 id="how-to-use-bootstrapdat"><a class="plugin-anchor" href="#how-to-use-bootstrapdat" name="how-to-use-bootstrapdat"><i aria-hidden="true" class="fa fa-link"></i></a>How to use bootstrap.dat</h1>
+<h2 id="what-is-bootstrapdat"><a class="plugin-anchor" href="#what-is-bootstrapdat" name="what-is-bootstrapdat"><i aria-hidden="true" class="fa fa-link"></i></a>What is bootstrap.dat?</h2>
+<p><code>bootstrap.dat</code> is a file that contains the copy of blockchain from genesis block to a certain point of time. This compressed <code>bootstrap.dat</code> file is used to speed up the initial blockchain download times. Your wallet client downloads and verifies each block from the P2P network. This is usually slow and especially if you are using wallet for the first time, then syncing process can take quite a long time.</p>
+<p>Instead of using peer to peer communication your wallet client can read blockchain data from this compressed bootstrap file which contains the copy of blockchain data until a certain block height. Once the wallet client completes reading data from bootstrap file, it will then use the P2P connection to download the remaining blocks. This method is faster and moreover it consumes less bandwidth compared to standard synchronization process. However still bootstrap method takes some time as your wallet client needs to validate each individual blocks.</p>
+<h2 id="how-to-generate-bootstrapdat"><a class="plugin-anchor" href="#how-to-generate-bootstrapdat" name="how-to-generate-bootstrapdat"><i aria-hidden="true" class="fa fa-link"></i></a>How to generate bootstrap.dat?</h2>
+<p>Construct a linear, no-fork, best version of the ZHCash blockchain. The scripts run using Python 3 but are compatible with Python 2.</p>
+<h3 id="step-1-download-script-files"><a class="plugin-anchor" href="#step-1-download-script-files" name="step-1-download-script-files"><i aria-hidden="true" class="fa fa-link"></i></a>Step 1: Download script files</h3>
+<p>Clone the ZHCash official repo and enter <code>contrib/linearize</code> directory</p>
+<pre><code>git clone https://github.com/zerohourcash/zerohourcash
+cd ZHCash/contrib/linearize
+</code></pre><h3 id="step-2-download-hash-list"><a class="plugin-anchor" href="#step-2-download-hash-list" name="step-2-download-hash-list"><i aria-hidden="true" class="fa fa-link"></i></a>Step 2: Download hash list</h3>
+<pre><code>./linearize-hashes.py linearize.cfg &gt; hashlist.txt
+</code></pre><p>Required configuration file settings for linearize-hashes:</p>
+<ul>
+<li>RPC: <code>datadir</code> (Required if <code>rpcuser</code> and <code>rpcpassword</code> are not specified)</li>
+<li>RPC: <code>rpcuser</code>, <code>rpcpassword</code> (Required if <code>datadir</code> is not specified)</li>
+</ul>
+<p>Optional config file setting for linearize-hashes:</p>
+<ul>
+<li>RPC: <code>host</code>  (Default: <code>127.0.0.1</code>)</li>
+<li>RPC: <code>port</code>  (Default: <code>38100</code>)</li>
+<li>Blockchain: <code>min_height</code>, <code>max_height</code></li>
+<li><code>rev_hash_bytes</code>: If true, the written block hash list will be byte-reversed. (In other words, the hash returned by getblockhash will have its bytes reversed.) False by default. Intended for generation of standalone hash lists but safe to use with linearize-data.py, which will output the same data no matter which byte format is chosen.</li>
+</ul>
+<p>The <code>linearize-hashes</code> script requires a connection, local or remote, to a JSON-RPC server. Running <code>ZHCashd</code> or <code>ZHCash-qt -server</code> will be sufficient.</p>
+<h3 id="step-3-copy-local-block-data"><a class="plugin-anchor" href="#step-3-copy-local-block-data" name="step-3-copy-local-block-data"><i aria-hidden="true" class="fa fa-link"></i></a>Step 3: Copy local block data</h3>
+<pre><code>./linearize-data.py linearize.cfg
+</code></pre><p>Required configuration file settings:</p>
+<ul>
+<li><code>output_file</code>: The file that will contain the final blockchain. or</li>
+<li><code>output</code>: Output directory for linearized <code>blocks/blkNNNNN.dat</code> output.</li>
+</ul>
+<p>Optional config file setting for linearize-data:</p>
+<ul>
+<li><code>debug_output</code>: Some printouts may not always be desired. If true, such output will be printed.</li>
+<li><code>file_timestamp</code>: Set each file's last-accessed and last-modified times, respectively, to the current time and to the timestamp of the most recent block written to the script's blockchain.</li>
+<li><code>genesis</code>: The hash of the genesis block in the blockchain.</li>
+<li><code>input</code>: ZHCashd blocks/ directory containing blkNNNNN.dat</li>
+<li><code>hashlist</code>: text file containing list of block hashes created by linearize-hashes.py.</li>
+<li><code>max_out_sz</code>: Maximum size for files created by the <code>output_file</code> option. (Default: <code>1000*1000*1000</code> bytes)</li>
+<li><code>netmagic</code>: Network magic number.</li>
+<li><code>out_of_order_cache_sz</code>: If out-of-order blocks are being read, the block can be written to a cache so that the blockchain doesn't have to be sought again. This option specifies the cache size. (Default: <code>100*1000*1000</code> bytes)</li>
+<li><code>rev_hash_bytes</code>: If true, the block hash list written by linearize-hashes.py will be byte-reversed when read by linearize-data.py. See the linearize-hashes entry for more information.</li>
+<li><code>split_timestamp</code>: Split blockchain files when a new month is first seen, in addition to reaching a maximum file size (<code>max_out_sz</code>).</li>
+</ul>
+<h2 id="how-to-use-bootstrapdat"><a class="plugin-anchor" href="#how-to-use-bootstrapdat" name="how-to-use-bootstrapdat"><i aria-hidden="true" class="fa fa-link"></i></a>How to use bootstrap.dat</h2>
+<ol>
+<li>Download <code>bootstrap.dat</code> file from <code>https://s.ZHCash.site/bootstrap.dat</code>.</li>
+<li>Move <code>bootstrap.dat</code> into ZHCash data directory, the default datadir paths are different paths for different OS:<ul>
+<li>Linux: <code>~/.ZHCash</code></li>
+<li>OSX: <code>~/Library/Application Support/ZHCash</code></li>
+<li>Windows: <code>%APPDATA%\ZHCash</code> (Please paste this path to your windows explorer, the path will be resolved automatically)</li>
+</ul>
+</li>
+<li>Restart wallet and wait for reindexing.</li>
+</ol>
+</div>
+</main>
+</div>
+<footer class="docs-footer">
+<div class="container footer-inner">
+<p>Need updates or community resources?</p>
+<a class="btn subtle" href="https://zhcash.net" rel="noopener" target="_blank">ZHCash Community</a>
+</div>
+</footer>
+</body>
+</html>

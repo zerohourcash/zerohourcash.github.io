@@ -215,7 +215,7 @@
       "partners.subtitle": "General and strategic partnerships across exchanges, analytics, and ecosystems.",
       "contact.title": "Contact & community",
       "contact.subtitle": "We are always ready to answer your questions. When contacting support, include your preferred response method.",
-      "contact.ticket": "Write a support ticket",
+      "contact.ticket": "Contact the community on Telegram",
       "contact.social": "Stay connected",
       "contact.telegram": "Telegram",
       "contact.twitter": "X / Twitter",
@@ -256,7 +256,7 @@
       "footer.services_explorer": "Explorer",
       "footer.services_monitoring": "Monitoring",
       "footer.services_checker": "Node checker",
-      "footer.services_support": "Support hub",
+      "footer.services_support": "Telegram community",
       "footer.services_kb": "Knowledge Base",
       "footer.ecosystem": "Ecosystem",
       "footer.ecosystem_navigator": "Navigator",
@@ -264,7 +264,7 @@
       "footer.ecosystem_zgf": "Zero Gravity Foundation",
       "footer.ecosystem_grants": "Ecosystem Grant Programs — coming soon",
       "footer.ecosystem_nft": "NFT Global Network",
-      "footer.ecosystem_jobs": "Jobs",
+      "footer.ecosystem_jobs": "Community contacts",
     },
     ru: {
       "lang.current": "Русский",
@@ -481,7 +481,7 @@
       "partners.subtitle": "Генеральные и стратегические партнёрства с биржами, аналитическими сервисами и экосистемами.",
       "contact.title": "Контакты и сообщество",
       "contact.subtitle": "Мы всегда готовы ответить на ваши вопросы. Важно! При обращении в запросе (тикет) всегда указывайте способ обратной связи с вами.",
-      "contact.ticket": "Напишите тикет в службу поддержки",
+      "contact.ticket": "Связаться с сообществом в Telegram",
       "contact.social": "Будем на связи",
       "contact.telegram": "Telegram",
       "contact.twitter": "X / Twitter",
@@ -522,7 +522,7 @@
       "footer.services_explorer": "Обозреватель",
       "footer.services_monitoring": "Мониторинг",
       "footer.services_checker": "Проверка нод",
-      "footer.services_support": "Поддержка",
+      "footer.services_support": "Сообщество в Telegram",
       "footer.services_kb": "База знаний",
       "footer.ecosystem": "Экосистема",
       "footer.ecosystem_navigator": "Навигатор",
@@ -530,7 +530,7 @@
       "footer.ecosystem_zgf": "Zero Gravity Foundation",
       "footer.ecosystem_grants": "Грантовые программы — скоро",
       "footer.ecosystem_nft": "NFT Global Network",
-      "footer.ecosystem_jobs": "Вакансии",
+      "footer.ecosystem_jobs": "Контакты сообщества",
     }
   };
 

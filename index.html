@@ -28,15 +28,15 @@
 <a data-i18n="nav.wallets" href="#wallets">Wallets</a>
 <a data-i18n="nav.contact" href="#contact">Contact</a>
 <a data-i18n="nav.explorer" href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
-<a data-i18n="nav.docs" href="https://zh.cash/docs/en/" rel="noopener" target="_blank">Docs</a>
+<a data-i18n="nav.docs" href="docs/en" rel="noopener" target="_blank">Docs</a>
 </nav>
 <div aria-label="Select language" class="lang-switcher">
-<button aria-expanded="false" aria-haspopup="true" aria-controls="language-options" class="lang-current" type="button">
+<button aria-controls="language-options" aria-expanded="false" aria-haspopup="true" class="lang-current" type="button">
 <span class="lang-name" data-i18n="lang.current">English</span>
 </button>
-<ul class="lang-options" id="language-options" hidden="">
-<li><button type="button" data-lang="en">English</button></li>
-<li><button type="button" data-lang="ru">Русский</button></li>
+<ul class="lang-options" hidden="" id="language-options">
+<li><button data-lang="en" type="button">English</button></li>
+<li><button data-lang="ru" type="button">Русский</button></li>
 </ul>
 </div>
 <div class="nav-actions">
@@ -45,7 +45,7 @@
           </a>
 <a class="btn primary" data-i18n="hero.cta.wallet" href="https://wallet.zeroscan.st" rel="noopener" target="_blank">Wallet</a>
 </div>
-<button aria-expanded="false" aria-label="Toggle navigation" aria-controls="site-nav" class="nav-toggle" type="button">
+<button aria-controls="site-nav" aria-expanded="false" aria-label="Toggle navigation" class="nav-toggle" type="button">
 <span></span>
 <span></span>
 <span></span>
@@ -73,7 +73,7 @@
 <div class="hero-cta">
 <a class="btn primary" data-i18n="hero.cta.wallet" href="https://wallet.zeroscan.st" rel="noopener" target="_blank">Wallet</a>
 <a class="btn ghost" data-i18n="hero.cta.explorer" href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
-<a class="btn subtle" data-i18n="hero.cta.docs" href="https://zh.cash/docs/en/" rel="noopener" target="_blank">Read Docs</a>
+<a class="btn subtle" data-i18n="hero.cta.docs" href="docs/en" rel="noopener" target="_blank">Read Docs</a>
 </div>
 <div class="hero-meta">
 <div>
@@ -86,7 +86,7 @@
 </div>
 <div>
 <span class="meta-label" data-i18n="hero.meta.testnet">Testnet</span>
-<a data-i18n="hero.cta.testnet" href="https://testnet.zh.cash" rel="noopener" target="_blank">Launch Testnet</a>
+<a aria-disabled="true" class="unavailable-link" data-i18n="hero.cta.testnet" data-original-href="https://testnet.zh.cash" title="External service unavailable / Внешний сервис недоступен">Launch Testnet</a>
 </div>
 </div>
 </div>
@@ -113,13 +113,13 @@
 <li data-i18n="features.testnet">Testnet</li>
 </ul>
 <div class="hero-links">
-<a data-i18n="features.whitepaper" href="https://zh.cash/download/ZHCash_WhitePaper_EN.pdf" rel="noopener" target="_blank">
+<a data-i18n="features.whitepaper" href="download/ZHCash_WhitePaper_EN.pdf" rel="noopener" target="_blank">
                 White paper
               </a>
-<a data-i18n="features.validators" href="https://zh.cash/download/ZHCASH_for_Validators_EN.pdf" rel="noopener" target="_blank">
+<a data-i18n="features.validators" href="download/ZHCASH_for_Validators_EN.pdf" rel="noopener" target="_blank">
                 Validators
               </a>
-<a data-i18n="features.hypernet" href="https://evolution888.pro" rel="noopener" target="_blank">
+<a aria-disabled="true" class="unavailable-link" data-i18n="features.hypernet" data-original-href="https://evolution888.pro" title="External service unavailable / Внешний сервис недоступен">
                 HyperNet
               </a>
 </div>
@@ -615,7 +615,7 @@
 <h3 data-i18n="news.venture_title">Decentralized venture fund</h3>
 <p data-i18n="news.venture_text">ZERO GRAVITY FOUNDATION launches an innovative platform for high-tech startups.</p>
 <a data-i18n="news.view" href="https://t.me/zhcashnewsen/175" rel="noopener" target="_blank">View</a>
-<a data-i18n="news.project_site" href="https://zerogravity.foundation/" rel="noopener" target="_blank">Project site</a>
+<a aria-disabled="true" class="unavailable-link" data-i18n="news.project_site" data-original-href="https://zerogravity.foundation/" title="External service unavailable / Внешний сервис недоступен">Project site</a>
 </article>
 <article class="card">
 <img alt="THE TRENDS Forum and Exhibition" decoding="async" height="255" loading="lazy" src="img/photon.webp" width="255"/>
@@ -764,7 +764,7 @@
 <a href="img/cvl-network.svg" rel="noopener" target="_blank">
 <img alt="CVL Network" decoding="async" loading="lazy" src="img/cvl-network.svg"/>
 </a>
-<a href="https://nftmart.art" rel="noopener" target="_blank">
+<a aria-disabled="true" class="unavailable-link" data-original-href="https://nftmart.art" title="External service unavailable / Внешний сервис недоступен">
 <img alt="NFTMART.art" decoding="async" height="119" loading="lazy" src="img/nftmart.webp" width="640"/>
 </a>
 <a href="https://blockchainkz.info/en/" rel="noopener" target="_blank">
@@ -782,7 +782,7 @@
 <a href="img/cryptosummit-logo-red.svg" rel="noopener" target="_blank">
 <img alt="Crypto Summit 2024" decoding="async" src="img/cryptosummit-logo-red.svg"/>
 </a>
-<a href="https://zerogravity.foundation" rel="noopener" target="_blank">
+<a aria-disabled="true" class="unavailable-link" data-original-href="https://zerogravity.foundation" title="External service unavailable / Внешний сервис недоступен">
 <span class="partner-name">Zero Gravity Foundation</span>
 </a>
 <a href="img/ico-platforms/1.webp" rel="noopener" target="_blank">
@@ -811,8 +811,8 @@
               We are always ready to answer your questions. When contacting support, include your preferred
               response method.
             </p>
-<a class="btn primary" data-i18n="contact.ticket" href="https://app.zhcash.network/forms/ticket?col=col-md-5" rel="noopener" target="_blank">
-              Write a support ticket
+<a class="btn primary" data-i18n="contact.ticket" href="https://t.me/zhcash_official" rel="noopener" target="_blank">
+              Contact the community on Telegram
             </a>
 </div>
 <div class="surface">
@@ -851,41 +851,41 @@
 <div class="footer-columns">
 <div>
 <h4 data-i18n="footer.useful">Useful</h4>
-<a data-i18n="footer.useful_docs" href="https://app.zhcash.network/knowledge-base/category/documentation-eng" rel="noopener" target="_blank">Documentation</a>
-<a data-i18n="footer.useful_api" href="https://zh.cash/docs/en/ZHCash-RPC-API/index.html" rel="noopener" target="_blank">RPC-API</a>
+<a data-i18n="footer.useful_docs" href="docs/en/index.html" rel="noopener" target="_blank">Documentation</a>
+<a data-i18n="footer.useful_api" href="docs/en/ZHCash-RPC-API/index.html" rel="noopener" target="_blank">RPC-API</a>
 <a data-i18n="footer.useful_tokens" href="https://zeroscan.st/contract/tokens" rel="noopener" target="_blank">Tokens</a>
 <a data-i18n="footer.useful_stake" href="https://zeroscan.st/misc/stake-calculator" rel="noopener" target="_blank">Stake calculator</a>
 <a data-i18n="footer.useful_top_pos" href="https://zeroscan.st/misc/biggest-miners" rel="noopener" target="_blank">Top PoS nodes</a>
 <a data-i18n="footer.useful_solidity" href="https://docs.soliditylang.org/en/develop/index.html" rel="noopener" target="_blank">Solidity doc</a>
 <a data-i18n="footer.useful_remix" href="https://remix.ethereum.org/" rel="noopener" target="_blank">Remix Compiler</a>
-<a data-i18n="footer.useful_guide" href="https://zh.cash/download/Guide_ZHCASH_1.3_alpha_eng.pdf" rel="noopener" target="_blank">Guide for Dev</a>
-<a data-i18n="footer.useful_peers" href="https://zh.cash/download/peers.zip" rel="noopener" target="_blank">peers.dat</a>
+<a data-i18n="footer.useful_guide" href="download/Guide_ZHCASH_1.3_alpha_eng.pdf" rel="noopener" target="_blank">Guide for Dev</a>
+<a data-i18n="footer.useful_peers" href="download/peers.zip" rel="noopener" target="_blank">peers.dat</a>
 </div>
 <div>
 <h4 data-i18n="footer.info">Information</h4>
-<a data-i18n="footer.info_whitepaper" href="https://zh.cash/download/ZHCash_WhitePaper_EN.pdf" rel="noopener" target="_blank">White paper</a>
-<a data-i18n="footer.info_validators" href="https://zh.cash/download/ZHCASH_for_Validators_EN.pdf" rel="noopener" target="_blank">Validators</a>
-<a data-i18n="footer.info_hypernet" href="https://evolution888.pro" rel="noopener" target="_blank">HyperNet</a>
-<a data-i18n="footer.info_brand" href="https://zh.cash/download/ZHCASH_style_guide.rar" rel="noopener" target="_blank">Brand book</a>
+<a data-i18n="footer.info_whitepaper" href="download/ZHCash_WhitePaper_EN.pdf" rel="noopener" target="_blank">White paper</a>
+<a data-i18n="footer.info_validators" href="download/ZHCASH_for_Validators_EN.pdf" rel="noopener" target="_blank">Validators</a>
+<a aria-disabled="true" class="unavailable-link" data-i18n="footer.info_hypernet" data-original-href="https://evolution888.pro" title="External service unavailable / Внешний сервис недоступен">HyperNet</a>
+<a data-i18n="footer.info_brand" href="download/ZHCASH_style_guide.rar" rel="noopener" target="_blank">Brand book</a>
 <a data-i18n="footer.info_bounty" href="https://bounty.zhchain.sbs" rel="noopener" target="_blank">BOUNTY💎</a>
 </div>
 <div>
 <h4 data-i18n="footer.services">Services</h4>
 <a data-i18n="footer.services_console" href="https://zhcash.org" rel="noopener" target="_blank">Console</a>
 <a data-i18n="footer.services_explorer" href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
-<a data-i18n="footer.services_monitoring" href="https://zhcash.network" rel="noopener" target="_blank">Monitoring</a>
-<a data-i18n="footer.services_checker" href="https://status.zhcash.network" rel="noopener" target="_blank">Node checker</a>
-<a data-i18n="footer.services_support" href="https://app.zhcash.network" rel="noopener" target="_blank">Support hub</a>
-<a data-i18n="footer.services_kb" href="https://app.zhcash.network/knowledge-base" rel="noopener" target="_blank">Knowledge Base</a>
+<a aria-disabled="true" class="unavailable-link" data-i18n="footer.services_monitoring" data-original-href="https://zhcash.network" title="External service unavailable / Внешний сервис недоступен">Monitoring</a>
+<a aria-disabled="true" class="unavailable-link" data-i18n="footer.services_checker" data-original-href="https://status.zhcash.network" title="External service unavailable / Внешний сервис недоступен">Node checker</a>
+<a data-i18n="footer.services_support" href="https://t.me/zhcash_official" rel="noopener" target="_blank">Telegram community</a>
+<a data-i18n="footer.services_kb" href="docs/en/index.html" rel="noopener" target="_blank">Knowledge Base</a>
 </div>
 <div>
 <h4 data-i18n="footer.ecosystem">Ecosystem</h4>
 <a data-i18n="footer.ecosystem_navigator" href="https://zhcash.net" rel="noopener" target="_blank">Navigator</a>
-<a data-i18n="footer.ecosystem_dao" href="https://zerogravity.foundation/dao" rel="noopener" target="_blank">DAO</a>
-<a data-i18n="footer.ecosystem_zgf" href="https://zerogravity.foundation" rel="noopener" target="_blank">Zero Gravity Foundation</a>
+<a aria-disabled="true" class="unavailable-link" data-i18n="footer.ecosystem_dao" data-original-href="https://zerogravity.foundation/dao" title="External service unavailable / Внешний сервис недоступен">DAO</a>
+<a aria-disabled="true" class="unavailable-link" data-i18n="footer.ecosystem_zgf" data-original-href="https://zerogravity.foundation" title="External service unavailable / Внешний сервис недоступен">Zero Gravity Foundation</a>
 <span class="muted" data-i18n="footer.ecosystem_grants">Ecosystem Grant Programs — coming soon</span>
-<a data-i18n="footer.ecosystem_nft" href="https://nftmart.art/blog" rel="noopener" target="_blank">NFT Global Network</a>
-<a data-i18n="footer.ecosystem_jobs" href="https://app.zhcash.network/forms/ticket?col=col-md-5" rel="noopener" target="_blank">Jobs</a>
+<a aria-disabled="true" class="unavailable-link" data-i18n="footer.ecosystem_nft" data-original-href="https://nftmart.art/blog" title="External service unavailable / Внешний сервис недоступен">NFT Global Network</a>
+<a data-i18n="footer.ecosystem_jobs" href="https://t.me/zhcash_official" rel="noopener" target="_blank">Community contacts</a>
 </div>
 </div>
 </div>

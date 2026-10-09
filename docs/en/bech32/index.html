@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ZHCash Documentation" name="description"/>
+<title>bech32 support | ZHCash Documentation</title>
+<link href="../../gitbook/images/favicon.ico" rel="icon"/>
+
+
+
+<link href="../docs.css" rel="stylesheet"/>
+</head>
+<body class="docs-theme">
+<header class="docs-header">
+<div class="container header-inner">
+<a class="brand" href="../../../index.html">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../../img/logo.webp"/>
+</a>
+<nav class="header-nav">
+<a href="../../../index.html">Main site</a>
+<a class="active" href="../index.html">Docs</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</nav>
+</div>
+</header>
+<div class="docs-layout">
+<aside class="docs-sidebar">
+<div class="sidebar-brand">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../../img/logo.webp"/>
+<p>Documentation</p>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section">
+<span class="nav-title">Introduction</span>
+<a href="../index.html">Introduction</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Using the ZHCash wallet</span>
+<a href="../ZHCash-Wallet-Tutorial/index.html">Desktop wallet basic usage</a>
+<a href="../ZHCash-wallet-usage-best-practices/index.html">Best Practices</a>
+<a href="../updateZHCash/index.html">How to Update your ZHCash wallet</a>
+<a href="../commands/index.html">ZHCash Core Wallet Commands</a>
+<a href="../Adding-Nodes/index.html">Adding Nodes</a>
+<a href="../Encrypt-and-Unlock-ZHCash-Wallet/index.html">Encrypt and Unlock ZHCash Wallet</a>
+<a href="../Wallet-Recovery-with-Salvagewallet.html">Wallet Recovery With Salvagewallet</a>
+<a class="active" href="index.html">bech32 support</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Other ZHCash wallets</span>
+<a href="../ZHCash-WebWallet-usage/index.html">Web Wallet</a>
+<a href="../How-to-use-ZHCash-Android-Wallet/index.html">How to use ZHCash Android Wallet</a>
+<a href="../ZHCash-Exchange-Usage-Guide-and-Info.html">ZHCash Exchange Usage Guide</a>
+<a href="../How-To-Add-Options/index.html">How to Add Options</a>
+<a href="../How-to-Use-Bootstrap/index.html">How to Use bootstrap.dat</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Developer &amp; RPC</span>
+<a href="../ZHCash-RPC-API/index.html">ZHCash RPC API</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Resources</span>
+<a href="https://zhcash.net" rel="noopener" target="_blank">Community</a>
+<a href="../../../index.html">Main site</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</div>
+</nav>
+</aside>
+<main class="docs-content">
+<div class="content-inner"><p class="archive-note">Archived documentation (backup: 4 September 2026). Commands and wallet interfaces may differ in current releases.</p>
+<h1 id="bech32-addresses-on-ZHCash-0161"><a class="plugin-anchor" href="#bech32-addresses-on-ZHCash-0161" name="bech32-addresses-on-ZHCash-0161"><i aria-hidden="true" class="fa fa-link"></i></a>bech32 addresses on ZHChain</h1>
+<p><strong>IMPORTANT NOTE:</strong> bech32 addresses <strong>CANNOT</strong> <strong>participate in staking.</strong> They're only for transacting and storing ZHChain.</p>
+<p>ZHCash 0.16 brought several important updates, one of the most important is in fact the support for bech32 addresses. <strong>These can be enabled on new wallets</strong> by adding <code>addresstype=bech32</code> to the zerohour.conf file ATTENTION! for Windows zerohour.conf</p>
+<p><strong>PLEASE NOTE</strong> bech32 is very new and most online services don't support it yet, this means you cannot withdraw from most exchanges/online wallets to a bech32 address for now, as time passes and there's more support for bech32, it'll be easy to use from/to any service.</p>
+<p>There's many advantages to this new format, it's the future in many ways as even lightning network will benefit from this, bech32 addresses on ZHCash start with <code>zh1</code> (Address for example zh1qys978t4qsm5xgpe7w8v57tgvalf3lx5ea23q9p). To learn more about bech32: </p>
+<p><a href="https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki" target="_blank">https://github.com/bitcoin/bips/blob/master/bip-0173.mediawiki</a></p>
+<p><a href="https://www.coindesk.com/pieter-wuilles-latest-project-making-bitcoin-harder-lose/" target="_blank">https://www.coindesk.com/pieter-wuilles-latest-project-making-bitcoin-harder-lose/</a></p>
+<h3 id="lets-see-how-to-enable-these-addresses-on-ZHCash-0161"><a class="plugin-anchor" href="#lets-see-how-to-enable-these-addresses-on-ZHCash-0161" name="lets-see-how-to-enable-these-addresses-on-ZHCash-0161"><i aria-hidden="true" class="fa fa-link"></i></a>Let's see how to enable these addresses on ZHCash:</h3>
+<p>Following our sample, in Mac OS, we need to go to the folder /Users/yourusername/Library/Application Support/ZHCash <strong>(If it doesn't exist, you need to create it)</strong></p>
+<p>There's two options for navigating ourselves towards that folder, the first one is by opening Finder and going to the menu: go -&gt; go to folder.. &gt; ~/Library/Application Support/ZHCash</p>
+<p><img alt="0" decoding="async" loading="lazy" src="0.png.webp"/></p>
+
+<p>Optionally, we can use the Mac OS terminal if you're more comfortable with it</p>
+<p><img alt="2" decoding="async" loading="lazy" src="2.png.webp"/></p>
+<p>Once inside that folder, we need to create the zerohour.conf file (from a text editor or command line) and add</p>
+<p><code>addresstype=bech32</code> to it, save and close the file. ATTENTION! for Windows zerohour.conf</p>
+<p><img alt="3" decoding="async" loading="lazy" src="3.png.webp"/></p>
+<p>Next, we launch the ZHCash wallet, we'll be able to create and use bech32 addresses now. Just go to the "receive" menu and create a new payment request<img alt="4" decoding="async" loading="lazy" src="4.png.webp"/></p>
+<p>Sending and receiving is pretty much the same as before, just copy and paste the address on the send field to send some ZHCash to a bech32 address, or do the same for receiving.</p>
+<h1 id="other-operating-systems"><a class="plugin-anchor" href="#other-operating-systems" name="other-operating-systems"><i aria-hidden="true" class="fa fa-link"></i></a>Other Operating systems:</h1>
+<h4 id="windows"><a class="plugin-anchor" href="#windows" name="windows"><i aria-hidden="true" class="fa fa-link"></i></a>Windows:</h4>
+<p>Navigate to %Appdata%/ and you'll find the ZHCash folder</p>
+<h4 id="linuxfreebsd"><a class="plugin-anchor" href="#linuxfreebsd" name="linuxfreebsd"><i aria-hidden="true" class="fa fa-link"></i></a>Linux/FreeBSD:</h4>
+<p>Your home folder contains the ZHCash folder, by default it's in this location ~/.ZHCash/ </p>
+</div>
+</main>
+</div>
+<footer class="docs-footer">
+<div class="container footer-inner">
+<p>Need updates or community resources?</p>
+<a class="btn subtle" href="https://zhcash.net" rel="noopener" target="_blank">ZHCash Community</a>
+</div>
+</footer>
+</body>
+</html>

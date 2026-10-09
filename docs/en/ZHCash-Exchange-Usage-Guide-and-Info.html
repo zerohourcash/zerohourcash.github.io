@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="ZHCash Documentation" name="description"/>
+<title>ZHCash Exchange Usage Guide · ZHCash Documentation</title>
+<link href="../gitbook/images/favicon.ico" rel="icon"/>
+
+
+
+<link href="docs.css" rel="stylesheet"/>
+</head>
+<body class="docs-theme">
+<header class="docs-header">
+<div class="container header-inner">
+<a class="brand" href="../../index.html">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../img/logo.webp"/>
+</a>
+<nav class="header-nav">
+<a href="../../index.html">Main site</a>
+<a class="active" href="index.html">Docs</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</nav>
+</div>
+</header>
+<div class="docs-layout">
+<aside class="docs-sidebar">
+<div class="sidebar-brand">
+<img alt="ZHCash" decoding="async" loading="lazy" src="../../img/logo.webp"/>
+<p>Documentation</p>
+</div>
+<nav class="sidebar-nav">
+<div class="nav-section">
+<span class="nav-title">Introduction</span>
+<a href="index.html">Introduction</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Using the ZHCash wallet</span>
+<a href="ZHCash-Wallet-Tutorial/index.html">Desktop wallet basic usage</a>
+<a href="ZHCash-wallet-usage-best-practices/index.html">Best Practices</a>
+<a href="updateZHCash/index.html">How to Update your ZHCash wallet</a>
+<a href="commands/index.html">ZHCash Core Wallet Commands</a>
+<a href="Adding-Nodes/index.html">Adding Nodes</a>
+<a href="Encrypt-and-Unlock-ZHCash-Wallet/index.html">Encrypt and Unlock ZHCash Wallet</a>
+<a href="Wallet-Recovery-with-Salvagewallet.html">Wallet Recovery With Salvagewallet</a>
+<a href="bech32/index.html">bech32 support</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Other ZHCash wallets</span>
+<a href="ZHCash-WebWallet-usage/index.html">Web Wallet</a>
+<a href="How-to-use-ZHCash-Android-Wallet/index.html">How to use ZHCash Android Wallet</a>
+<a class="active" href="ZHCash-Exchange-Usage-Guide-and-Info.html">ZHCash Exchange Usage Guide</a>
+<a href="How-To-Add-Options/index.html">How to Add Options</a>
+<a href="How-to-Use-Bootstrap/index.html">How to Use bootstrap.dat</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Developer &amp; RPC</span>
+<a href="ZHCash-RPC-API/index.html">ZHCash RPC API</a>
+</div>
+<div class="nav-section">
+<span class="nav-title">Resources</span>
+<a href="https://zhcash.net" rel="noopener" target="_blank">Community</a>
+<a href="../../index.html">Main site</a>
+<a href="https://zeroscan.st" rel="noopener" target="_blank">Explorer</a>
+<a href="https://github.com/zerohourcash/zerohourcash" rel="noopener" target="_blank">GitHub</a>
+</div>
+</nav>
+</aside>
+<main class="docs-content">
+<div class="content-inner"><p class="archive-note">Archived documentation (backup: 4 September 2026). Commands and wallet interfaces may differ in current releases.</p>
+<h1 id="ZHCash-exchange-usage-guide-and-info"><a class="plugin-anchor" href="#ZHCash-exchange-usage-guide-and-info" name="ZHCash-exchange-usage-guide-and-info"><i aria-hidden="true" class="fa fa-link"></i></a>ZHCash Exchange Usage Guide and Info</h1>
+<h2 id="setup"><a class="plugin-anchor" href="#setup" name="setup"><i aria-hidden="true" class="fa fa-link"></i></a>Setup</h2>
+<p>You can download a pre-built version of ZHCash from our Github Release page:</p>
+<p><a href="https://github.com/zerohourcash/zerohourcash" target="_blank">https://github.com/zerohourcash/zerohourcash</a></p>
+<p>Simply extract the .tar.gz linux-64bit archive. In the "bin" directory will be the two programs of interest, ZHCashd and ZHCash-cli</p>
+<p>If you choose to compile it yourself instead, follow these steps on Ubuntu:</p>
+<p>Install packages if needed:</p>
+<pre><code>sudo apt-get install build-essential libtool autotools-dev automake pkg-config libssl-dev libevent-dev bsdmainutils git cmake libboost-all-dev
+
+sudo apt-get install software-properties-common
+
+sudo add-apt-repository ppa:bitcoin/bitcoin
+
+sudo apt-get update
+
+sudo apt-get install libdb4.8-dev libdb4.8++-dev
+</code></pre><pre><code>git clone https://github.com/zerohourcash/zerohourcash --recursive
+git checkout mainnet-ignition-v1.0.1 # or use the latest release
+./autogen.sh
+./configure --with-gui=no --enable-hardening
+make -j3
+</code></pre><p>Afterwards, in the "src" directory, there will be two programs of interest, <code>ZHCashd</code> and <code>ZHCash-cli</code></p>
+<h2 id="startup"><a class="plugin-anchor" href="#startup" name="startup"><i aria-hidden="true" class="fa fa-link"></i></a>Startup</h2>
+<p>In order to startup ZHCashd, use the following:</p>
+<pre><code>./ZHCashd -daemon -staking=0
+</code></pre><p>Additional options can be specified in <code>~/.ZHCash/ZHCash.conf</code>, you can add <code>-staking=0</code> in the ZHCash.conf file</p>
+<p>Afterwards, you can check the status of the ZHCash node:</p>
+<pre><code>./ZHCash-cli getinfo
+</code></pre><p>It will show a block count. when the block count matches the latest block on our block explorer: <a href="https://zeroscan.st/" target="_blank">https://zeroscan.io</a> then that means that the node is synchronized. If it shows 0 blocks and 0 connections for more than a few minutes, contact ZHCash staff for help. Syncing the blockchain will take around 10-30 minutes depending on connection speed</p>
+<p>In order to shut down the node, simply use:</p>
+<pre><code>./ZHCash-cli stop
+</code></pre><p><strong>NOTE:</strong> <code>-staking=false</code> disables automatic staking in the wallet. This is <strong>HIGHLY RECOMMENDED</strong> for exchanges. Staking can make an unpredictable amount of coins unaccessible for 500 blocks (~20 hours) and so it is recommended that exchanges do not participate in staking.</p>
+<h2 id="wallet-backup"><a class="plugin-anchor" href="#wallet-backup" name="wallet-backup"><i aria-hidden="true" class="fa fa-link"></i></a>Wallet Backup</h2>
+<p>Make sure to always back up your wallet! The location of the wallet file on Linux is <code>~/.ZHCash/wallet.dat</code>. Make sure to shut down the node before making a backup to avoid data corruption.</p>
+<p>The wallet can also be encrypted on-disk:</p>
+<pre><code>./ZHCash-cli encryptwallet "your strong password"
+</code></pre><p>The ZHCash node will automatically stop itself in order to encrypt the wallet. You will need to execute <code>./ZHCashd -daemon -staking=false</code> again afterwards to start the node again</p>
+<p><strong>IMPORTANT:</strong> after encrypting the wallet <strong>YOU MUST</strong> make a new backup of the wallet.dat file. Failing to do so can result in <strong>LOSS OF COINS</strong>. If the password to the encrypted wallet is lost, there is <strong>NO WAY TO RECOVER THE COINS</strong>. Make sure to take backups of both wallet.dat, as well as the password used for encryption!</p>
+<p>In order to unlock the wallet:</p>
+<pre><code>./ZHCash-cli walletpassphrase "your strong password" XXX
+</code></pre><p>XXX is how many seconds to keep the wallet unlocked for. So, specifying that as "1000" would mean keep the wallet unlocked for 1000 seconds.</p>
+<p>For an exchange it is probably best to not use wallet encryption on the hot wallet. In the above example, after 1000 seconds have passed, it is necessary to unlock the wallet again. This may cause some problems depending on your exact exchange systems</p>
+<p><strong>NOTE:</strong> Unlocking the wallet is only required to send coins. If you only need to receive coins and track transactions, this can be done with an encrypted and locked wallet</p>
+<h2 id="receiving-coins"><a class="plugin-anchor" href="#receiving-coins" name="receiving-coins"><i aria-hidden="true" class="fa fa-link"></i></a>Receiving coins</h2>
+<p>In order to generate a new address:</p>
+<pre><code>./ZHCash-cli getnewaddress ""
+</code></pre><p>This will generate a unique address every time it is executed. Note ZHCash addresses start with Q for standard pubkeyhash addresses, and start with M for multi-sig addresses</p>
+<p>To validate an address is valid:</p>
+<pre><code>./ZHCash-cli validateaddress "address here"
+</code></pre><p>In order to see the coins received by a particular address (note the address must be owned by this wallet. This does not allow checking addresses not owned by this wallet):</p>
+<pre><code>./ZHCash-cli getreceivedbyaddress "address here" MINCONF
+</code></pre><p>In this case, <code>MINCONF</code> is how many confirmations the transaction must have had on the blockchain before it will be included in this number.</p>
+<p>Minimum confirmations recommended by ZHCash:</p>
+<ul>
+<li>20 confirmations for very large amounts and for any amount during the first month of the mainnet launch</li>
+<li>10 confirmations for small and medium amounts after 1 month when the network is proven stable</li>
+</ul>
+<p>To get all transactions (including unconfirmed!) currently tracked by the wallet use this function:</p>
+<pre><code>./ZHCash-cli listtransactions "*" COUNT SKIP
+</code></pre><p>COUNT and SKIP can be used for paging through transactions. Using a very large count value may cause the node to perform the request slowly, and so it is recommended to never use a COUNT that is more than 100. SKIP is used to skip the first number of results. It is not recommended to rely only on this for the accounting of an exchange. It is possible that while you are iterating to discover the full transaction list, that someone sends a transaction to the wallet that will be missed. Also, this method includes <strong>UNCONFIRMED</strong> transactions and must be used with caution.</p>
+<p><strong>WARNING</strong>: Bitcoind and thus ZHCashd has some account functionality so that different addresses can use different accounts. <strong>DO NOT RELY ON THIS</strong>. This feature is deprecated and has many security problems, and will be removed in the next release.</p>
+<h2 id="sending-coins"><a class="plugin-anchor" href="#sending-coins" name="sending-coins"><i aria-hidden="true" class="fa fa-link"></i></a>Sending Coins</h2>
+<p>It is not easily possible to dictate what address coins should be sent from. If your exchange system relies on this, you should make a workaround in your system so that this is not necessary.</p>
+<p>In order to send coins:</p>
+<pre><code>./ZHCash-cli sendtoaddress "address to send to" AMOUNT "comment about tx" "comment about address" SUBTRACTFEE
+</code></pre><p>The "comment" arguments can be left blank if unneeded. These comments are saved within your wallet file and are used by some exchanges to track internal withdraw and user IDs.</p>
+<p>The SUBTRACTFEE option can be either "true" or "false". When this option is true, it subtracts the fee from the amount sent. So, if you do</p>
+<pre><code>./ZHCash-cli sendtoaddress "address" 10 "" "" true
+</code></pre><p>And the network fee is 0.1 ZHCash, then the actual amount that the user will receive will be 9.9 ZHCash. If SUBTRACTFEE is instead set to false, then they will receive 10, but your wallet will have paid 0.1 ZHCash for the network fee.</p>
+<p><strong>NOTE:</strong> Exchange users should not be capable of sending coins directly to a smart contract address (one starting with 0x). These addresses will be rejected by sendtoaddress and proper usage requires significantly more caution to properly use.</p>
+<h2 id="parameters"><a class="plugin-anchor" href="#parameters" name="parameters"><i aria-hidden="true" class="fa fa-link"></i></a>Parameters</h2>
+<ul>
+<li>Recommended tx fee: 400000sat or 0.004 ZHCash per kilobyte of tx data (2kb is reasonable transaction size expectation, but it can sometimes be more)</li>
+<li>Recommended confirmations: 20 for the first month, 10 afterwards</li>
+<li>Recommended minimum withdraw amount: 0.01 ZHCash</li>
+<li>P2P Network Port: 3888 (port forwarding is not required or recommended, but the wallet must be able to access other external nodes through this port to download the blockchain)</li>
+</ul>
+</div>
+</main>
+</div>
+<footer class="docs-footer">
+<div class="container footer-inner">
+<p>Need updates or community resources?</p>
+<a class="btn subtle" href="https://zhcash.net" rel="noopener" target="_blank">ZHCash Community</a>
+</div>
+</footer>
+</body>
+</html>
